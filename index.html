@@ -1,8 +1,110 @@
 <!DOCTYPE html>
 <html>
-<body>
-	<h1>
-		This is Shrey's Website!!
-	</h1>
-</body>
-	</html>
+	<head lang="en">
+		<!--meta name="viewport" content="width=device-width initial-scale=1"-->
+		<title>Shrey Kavi - Home</title>
+	 	<link href="Styles/main.css" rel="stylesheet" type="text/css" >
+	</head>
+		<nav>
+			<ul>
+				<li><a id="Intro" href="#IntroSect" class="nextPage"><img src="Images/logo.png"/></a></li>
+				<li><a id="About" href="#AboutSect" class="nextPage">About Me</a></li>
+				<li><a id="Recent" href="#RecentSect" class="nextPage">Recent Work</a></li>
+				<li><a id="Projects" href="#ProjectsSect" class="nextPage">Projects</a></li>
+				<li><a id="Hack" href="#HackSect" class="nextPage">Hackathons</a></li>
+				<li><a id="Contact" href="#ContactSect" class="nextPage">Contact</a></li>
+			</ul>
+		</nav>
+	
+		<div id="IntroSect" class="sect sect1">
+
+		</div>
+
+		<div id="AboutSect" class="subSection">
+			<h1>About</h1>
+		</div>
+
+		<div id="RecentSect" class="sect sect2">
+			
+		</div>
+
+		<div id="ProjectsSect" class="subSection">
+			
+		</div>
+
+		<div id="HackSect" class="sect sect3">
+			
+		</div>
+
+		<div id="ContactSect" class="subSection">
+			
+		</div>
+	</body>
+</html>
+
+<script src="jquery.js"></script>
+
+<script>
+// how to declare jquery function: $(document).ready(function(){
+//use this as shortcut
+$(function() {
+
+//var hide = false;
+//if-else to check window width and decide nav bar
+	if( $(window).width() > 710 ){
+		//animates to reveal regular navbar
+		$("nav").hide().delay(300).show(300);
+		//hide = false;
+	}
+
+	else{
+		//hides desktop navbar
+		$("nav").hide();
+		hide = true;
+	}
+
+	//If window resized this event may be triggered
+	//$(window).resize(function(){ //using resize didnt work so used timer
+	$(window).on('resize', function(){
+		if( $(window).width() > 710 ){
+			//hide = false;
+			//alert("correct size");
+		}
+
+		/*if( $(window).width() < 710 ){
+			//hide = true;
+			//alert("small size");
+		}
+	}
+
+	/*setInterval(function(){
+		if(hide == true){
+			$("nav").hide();
+		}
+		else{
+			$("nav").hide().delay(300).show(300);
+		}
+	},3000)*/
+
+	//Calls scrolling for navbar options
+	navScrolling();
+});
+
+//Function for navbar scrolling
+function navScrolling() {
+		$("nav a").click(function(e){
+			e.preventDefault();
+			var sectionID = e.currentTarget.id + "Sect";
+			$("html body").animate({
+				scrollTop: $("#" + sectionID).offset().top
+			}, 500)
+
+		})
+}
+
+/*NOTES:
+*/
+
+</script>
+
+

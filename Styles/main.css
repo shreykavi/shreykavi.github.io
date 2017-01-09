@@ -4,19 +4,64 @@
 }
 
 h1, h2, h3, h4, h5, h6, p {
+	padding: 33px 0 0 33px;
 	margin-bottom: 20px;
-	color: aqua;
-	font-size: 50px;
+	color: black;
+	font-size: 40px;
 }
 
-nav {
+nav{
 	position: fixed;
 	width:100%;
-	z-index: 99;
 	overflow: hidden;
 	max-height: 100px;
 	z-index: 99;
 }
+
+#introLogo {
+	display: block;
+	margin:auto;
+	padding-top: 120px;
+	width: 50%;
+	max-width: 400px;
+}
+
+#titleName {
+	text-align: center;
+}
+
+.sect {
+	width:100%;
+}
+
+.subSection{
+	width:100%;
+}
+
+/*Objects for smaller screens*/
+.menuNav {
+	display: none;
+	margin-left: -2px;
+}
+
+.Hamburger {
+	display: none;
+}
+
+.pageTopBar {
+	display: none;
+}
+
+
+.titleText {
+	margin-left: 7px;
+	display: inline-block;
+	font-family: 'Lobster',serif;
+	color: white;
+	font-size: 100px;
+	overflow: hidden;
+}
+
 
 /*from internet*/
 ul {
@@ -45,7 +90,12 @@ li a {
 	font-family: Verdana;
 }
 
-a:hover:not(.active) {
+/*hovering effects for nav*/
+.nextPage:hover:not(.active) {
+    background-color: #333;
+}
+
+.menuNav :hover:not(.active) {
     background-color: #333;
 }
 
@@ -82,11 +132,11 @@ background-color:#4CAF50;
 }
 
 .sect2{
-	background-image: url("../Images/Main.jpg");
+	background-image: url("../Images/Main3.jpg");
 }
 
 .sect3{
-	background-image: url("../Images/Main.jpg");
+	background-image: url("../Images/Main2.jpg");
 }
 
 .subSection {
@@ -96,4 +146,78 @@ background-color:#4CAF50;
 
 html, body {
 	height:100%;
+}
+
+/*media queries*/
+
+/*small screens*/
+@media only screen and (max-width: 700px) {
+	nav {
+		display: none;
+	}
+
+	.topText {
+		margin-left: 7px;
+		display: inline-block;
+		font-family: 'Lobster',serif;
+		color: white;
+		font-size: 25px;
+		overflow: hidden;
+	}
+
+	.menuNav {
+		display: block;
+		position: fixed;
+		background-color: rgba(0,0,0,.001);
+		width: 38px;
+		height: 33px;
+		border-radius: 2px;
+		text-align: center;
+		cursor: pointer;
+	}
+	
+	.pageTopBar {
+		display: block;
+		position: fixed;
+		width:100%;
+		height: 33px;
+		background-color: rgba(0,0,0,.5);
+		overflow: hidden;
+	}
+
+	.Hamburger {
+		width: 150px;
+		display: none;
+		position: fixed;
+		background-color: rgba(0,0,0,.5);
+		overflow: hidden;
+		margin: 33px 0 0 0 ;
+	}
+
+	.nextPage {
+		color:beige;
+		font-size: 15px;
+		border: 1px; /*solid white added for dev*/;
+		padding: 0px 5% 0px 5%;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	#title {
+		float:left;
+	}
+
+	ul {
+	}
+
+	li {
+	    float: left;
+	    width: 15%;
+	    min-width: 115px;
+	}
+
+	li a {
+	    width: 120%;
+	}
+
 }

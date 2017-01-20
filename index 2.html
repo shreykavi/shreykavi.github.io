@@ -21,9 +21,9 @@
 			<ul class="Hamburger">
 				<li><a id="About" href="#AboutSect" class="nextPage hamOption">About Me</a></li>
 				<li><a id="Recent" href="#RecentSect" class="nextPage hamOption">Recent Work</a></li>
-				<li><a id="Projects" href="#ProjectsSect" class="nextPage hamOption">Activities</a></li>
+				<li><a id="Projects" href="#ProjectsSect" class="nextPage hamOption">Projects</a></li>
+				<li><a id="Hack" href="#HackSect" class="nextPage hamOption">Hackathons</a></li>
 				<li><a id="Contact" href="#ContactSect" class="nextPage hamOption">Contact</a></li>
-				<!--li><a id="Contact" href="#ContactSect" class="nextPage hamOption">Contact</a></li-->
 			</ul>
 		<!--Regularly sized nav bar-->
 		<nav>
@@ -31,9 +31,9 @@
 				<li><a id="Intro" href="#IntroSect" class="nextPage"><img src="Images/logo.png"/></a></li>
 				<li><a id="About" href="#AboutSect" class="nextPage">About Me</a></li>
 				<li><a id="Recent" href="#RecentSect" class="nextPage">Recent Work</a></li>
-				<li><a id="Projects" href="#ProjectsSect" class="nextPage">Activities</a></li>
+				<li><a id="Projects" href="#ProjectsSect" class="nextPage">Projects</a></li>
+				<li><a id="Hack" href="#HackSect" class="nextPage">Hackathons</a></li>
 				<li><a id="Contact" href="#ContactSect" class="nextPage">Contact</a></li>
-				<!--li><a id="Contact" href="#ContactSect" class="nextPage">Contact</a></li-->
 			</ul>
 		</nav>
 
@@ -41,75 +41,27 @@
 		<div id="IntroSect" class="sect sect1">
 			<img src="Images/logoOG.png" id="introLogo">
 			<div id="titleName"><font class="titleText">Shrey Kavi</font></div>
-			<hr id="introHR">
-			<div id="introDiv">
-				<table id="introTable">
-					<tr>
-						<td id="introContact"><a class="linkedCON" href="https://www.linkedin.com/in/shrey-kavi-961bb611b" target="_blank"><img src="Images/linkedin.png"></a></td>
-						<td id="introContact"><a class="githubCON" href="https://github.com/shreykavi" target="_blank"><img src="Images/github.png"></a></td>
-						<td id="introContact"><a class="mailCON" href="mailto:shrey.kavi@gmail.com"><img src="Images/mail.png"></a></td>
-						<td id="introContact"><a class="resumeCON" href="Files/Resume.pdf" download><img src="Images/cv.png"></a></td>
-
-					</tr>
-					<tr>
-						<td id="introDesc" class="linkedC">LinkedIn</td>
-						<td id="introDesc" class="githubC">GitHub</td>
-						<td id="introDesc" class="mailC">E-mail</td>
-						<td id="introDesc" class="resumeC">Resume</td>
-					</tr>
-				</table>
-			</div>
 		</div>
 
 		<div id="AboutSect" class="subSection">
-			<h1 id="aboutText1">Designing to perfection.</h1>
-			<div id="bodyText">
-				<h1 id="aboutText2">I am passionate about solving problems with design.</h1>
-				<h1 id="aboutText2">Aim to develop my design skills as they can be impactful in the real world.</h1>
-			</div>	
-			<HR>
-			<h1 id="aboutText3">Technical Skills</h1>
-			
-			<div id="skills">
-				<table class="skills">
-					<tr>
-						<td class="firstColm">Electrical and Programming </td>
-						<td class="secondColm">C, C++, Java, XML, Android Studio, Xcode, SQL, SVN, VHDL, FPGAs,
-Circuit Schematics
-</td>
-					</tr>
-					<tr>
-						<td class="firstColm">Design</td>
-						<td class="secondColm">Adobe Photoshop, Illustrator, Flash, InDesign, AutoCAD, Revit,
-Electrical Single Line Diagrams
-</td>
-					</tr>
-
-				</table>
-			</div>
+			<h1>About</h1>
 		</div>
 
 		<div id="RecentSect" class="sect sect2">
-			<div id="RecentDiv"><h1 id="RecentTitle">Recent Work</h1></div>
 			
 		</div>
 
 		<div id="ProjectsSect" class="subSection">
-			<h1>Other Activities</h1>
 			
 		</div>
 
-		<div id="ContactSect" class="sect sect3">
-			<h1>Contact</h1>
+		<div id="HackSect" class="sect sect3">
 			
 		</div>
 
-<!--Uncomment for new section
 		<div id="ContactSect" class="subSection">
-			<h1>About Me</h1>
 			
 		</div>
--->
 	</body>
 </html>
 
@@ -127,12 +79,6 @@ $(function() {
 
 	//Calls scrolling for navbar options
 	navScrolling();
-
-	//for contact buttons
-	introContact();
-
-	//Highlights active website section
-	//highLightActive();
 });
 
 //Function for scrolling to Top on Refresh
@@ -147,11 +93,9 @@ function navScrolling() {
 	$(".nextPage").click(function(e){
 		e.preventDefault();
 		var sectionID = e.currentTarget.id + "Sect";
-		var theOffset = $("#" + sectionID).offset();
 		$("html body").animate({
-			scrollTop: theOffset.top - 100
+			scrollTop: $("#" + sectionID).offset().top
 		}, 450)
-
 	})
 
 	$(".title").click(function(e){
@@ -161,6 +105,7 @@ function navScrolling() {
 			scrollTop: $("#" + sectionID).offset().top
 		}, 450)
 	})
+
 	$(".topText").click(function(e){
 		e.preventDefault();
 		var sectionID = e.currentTarget.id + "Sect";
@@ -168,15 +113,8 @@ function navScrolling() {
 			scrollTop: $("#" + sectionID).offset().top
 		}, 450)
 	})
+}
 
-}
-/*
-function highLightActive() {
-	$(".nextPage").click(function(e){
-		this.addClass('.active');
-	})
-}
-*/
 //Function for hamburger button
 function miniNavClick() {
 	//initially hides Hamburger
@@ -209,37 +147,6 @@ function miniNavClick() {
         $( window ).resize(function(){
         	$(".Hamburger").hide(300);
         });
-}
-
-function introContact(){
-	$(".linkedCON").hover(function(){
-		$(".linkedC").css("color", "white");
-	},
-	function(){
-		$(".linkedC").css("color", "transparent");
-	})
-
-	$(".githubCON").hover(function(){
-		$(".githubC").css("color", "white");
-	},
-	function(){
-		$(".githubC").css("color", "transparent");
-	})
-
-	$(".mailCON").hover(function(){
-		$(".mailC").css("color", "white");
-	},
-	function(){
-		$(".mailC").css("color", "transparent");
-	})
-
-	$(".resumeCON").hover(function(){
-		$(".resumeC").css("color", "white");
-	},
-	function(){
-		$(".resumeC").css("color", "transparent");
-	})
-
 }
 
 /*NOTES:

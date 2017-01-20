@@ -8,6 +8,110 @@ h1, h2, h3, h4, h5, h6, p {
 	margin-bottom: 20px;
 	color: black;
 	font-size: 40px;
+	font-family: 'Euphemia UCAS',serif;
+	text-align: center;
+}
+
+hr{
+	margin-top: 50px;
+	margin-bottom: 0px;
+	width: 80%;
+	margin-left: 10%;
+	text-align: center;
+}
+
+#introHR{
+margin-top: 10px;
+margin-bottom: 15px;
+}
+#introDiv {
+	text-align: center;
+	width: 100%;
+}
+
+#introTable {
+	margin-right: auto;
+	margin-left: auto;
+	width:50%;
+}
+
+#introContact {
+	font-family: 'Euphemia UCAS',serif;
+	font-weight: bold;
+	text-align: right;
+	vertical-align: top;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	cursor: pointer;
+	z-index: 1;
+}
+
+#introDesc{
+	font-family: 'Euphemia UCAS',serif;
+	color:transparent;
+	text-align: right;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+.mailC{	
+	margin-right: 20px;
+}
+
+#bodyText {
+	text-align: center;
+	width:80%;
+	margin: 0 10%;
+}
+#aboutText1 {
+	text-align: center;
+	height: 18px;
+}
+#aboutText2 {
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: -20px;
+
+}
+#aboutText3 {
+	font-size: 22px;
+	text-align: center;
+	margin-top: -10px;
+}
+
+
+.firstColm{
+	font-family: 'Euphemia UCAS',serif;
+	font-weight: bold;
+	text-align: right;
+	vertical-align: top;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.secondColm{
+	font-family: 'Euphemia UCAS',serif;
+	text-align: left;
+	padding-bottom: 20px;
+}
+.skills{
+	text-align: center;
+	width: 100%;
+}
+#skills {
+	margin-right: auto;
+	margin-left: auto;
+	width:70%;
+}
+
+#RecentDiv{
+	width: 100%;
+	background:#788BBC;
+	height: 14%;
+}
+#RecentTitle {
+	font-size: 30px;
+	color: white;
+	vertical-align: middle;
 }
 
 nav{
@@ -60,6 +164,7 @@ nav{
 	color: white;
 	font-size: 100px;
 	overflow: hidden;
+	width:500px;
 }
 
 
@@ -118,6 +223,7 @@ background-color:#4CAF50;
 	padding: 28px 5% 28px 5%;
 	text-align: center;
 	vertical-align: middle;
+	cursor: pointer;
 }
 
 .sect {
@@ -133,10 +239,12 @@ background-color:#4CAF50;
 
 .sect2{
 	background-image: url("../Images/Main3.jpg");
+	height:75%;
 }
 
 .sect3{
 	background-image: url("../Images/Main2.jpg");
+	height:75%;
 }
 
 .subSection {
@@ -163,6 +271,7 @@ html, body {
 		color: white;
 		font-size: 25px;
 		overflow: hidden;
+		min-width:110px;
 	}
 
 	.menuNav {

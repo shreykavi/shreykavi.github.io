@@ -66,16 +66,18 @@ margin-bottom: 15px;
 
 #AboutSect {
 	height:43%;
+	min-height: 550px;
 }
 #aboutText1 {
 	text-align: center;
 	height: 18px;
+	min-width: 500px;
 }
 #aboutText2 {
 	font-size: 18px;
 	text-align: center;
 	margin-bottom: -20px;
-
+	min-width: 300px;
 }
 #aboutText3 {
 	font-size: 22px;
@@ -96,6 +98,7 @@ margin-bottom: 15px;
 	font-family: 'Euphemia UCAS',serif;
 	text-align: left;
 	padding-bottom: 20px;
+	min-width: 300px;
 }
 .skills{
 	text-align: center;
@@ -109,6 +112,7 @@ margin-bottom: 15px;
 
 #RecentSect {
 	text-align: center;
+	min-height: 850px;
 }
 
 #RecentDiv{
@@ -129,10 +133,10 @@ margin-bottom: 15px;
 #recentSection {
 	margin:auto;
 	background: white;
-	width: 90%;
+	width: 95%;
 	background-color: rgba(0,0,0,.5);
 	border-radius: 10px;
-	margin-top: 50px
+	margin-top: 50px;
 }
 #recentImage{
 	display: inline-block;
@@ -151,7 +155,7 @@ margin-bottom: 15px;
 }
 #recentText2 {
 	display: block;
-	width:100%;
+	width:95%;
 	font-size: 15px;
 	text-align: justify;
 	color:white;
@@ -160,32 +164,35 @@ margin-bottom: 15px;
 
 #ProjectsSect {
 	height:40%;
+	min-height: 350px;
 }
 
 #activityImgDiv {
 	vertical-align: top;
 	margin-left: 5%;
 	display: inline-block;
-	width:20%;
+	margin-right: 0px;
 }
 #activityText {
 	vertical-align: top;
 	display: inline-block;
 	width:50%;
+	margin-left: 0px;
+
 }
 #actualTextTop{
 	text-align: left;
-	font-size: 40px;
+	font-size: 30px;
 	display: inline-block;
 	width:100%;
-	margin: -30px 0 0 -100px;
+	margin: -30px 0 0 0px;
 }
 #actualText {
 	text-align: justify;
 	font-size: 15px;
 	display: inline-block;
-	width:100%;
-	margin: -30px 0 0 -12%;
+	width:90%;
+	margin: -30px 0 0 0%;
 }
 #slideshow {
 	display: inline-block;
@@ -214,6 +221,10 @@ margin-bottom: 15px;
 	text-align: center;
 }
 
+#ContactSect {
+	min-height: 450px;
+}
+
 #endContact {
 	margin-left: 20px;
 	font-family: 'Euphemia UCAS',serif;
@@ -232,8 +243,29 @@ margin-bottom: 15px;
 	margin-top: 20px;
 	margin-bottom:50px;
 	display: inline-block;
+	min-width: 400px;
+}
+#recentText3aT {
+	display: inline-block;
+	width:100%;
+	font-size: 30px;
+	text-align: left;
+	color: white;
+	margin-top: -2%;
+	margin-bottom: 0px;
+	overflow: auto;
 }
 #recentText3a {
+	display: inline-block;
+	width:100%;
+	font-size: 20px;
+	text-align: left;
+	color: #e6e6e6;
+	margin-top: -5%;
+	margin-bottom: 1px;
+	overflow: auto;
+}
+#recentText3b {
 	display: inline-block;
 	width:100%;
 	font-size: 25px;
@@ -242,7 +274,7 @@ margin-bottom: 15px;
 	margin-top: -2%;
 	margin-bottom: 0px;
 }
-#recentText3b {
+#recentText3c {
 	display: inline-block;
 	width:100%;
 	font-size: 25px;
@@ -265,7 +297,8 @@ nav{
 	margin:auto;
 	padding-top: 120px;
 	width: 50%;
-	max-width: 400px;
+	max-width: 350px;
+	min-width: 200px;
 }
 
 #titleName {
@@ -302,7 +335,7 @@ nav{
 	color: white;
 	font-size: 100px;
 	overflow: hidden;
-	width:500px;
+	width:70%;
 }
 
 
@@ -373,6 +406,7 @@ background-color:#4CAF50;
 
 .sect1{
 	background-image: url("../Images/Main.jpg");
+	min-height: 770px;
 }
 
 .sect2{
@@ -466,5 +500,197 @@ html, body {
 	li a {
 	    width: 120%;
 	}
+#RecentSect{
+	min-height:1500px;
+}
 
+#recentSection {
+	margin:auto;
+	background: white;
+	width: 500px;
+	background-color: rgba(0,0,0,.5);
+	border-radius: 10px;
+	margin-top: 50px
+}
+
+#recentText2 {
+	margin-left: -20px;
+}
+
+#ProjectsSect {
+	height:40%;
+	min-height:850px;
+	text-align: center;
+}
+#activityImgDiv {
+	vertical-align: top;
+	margin: auto;
+	display: table;
+	width:20%;
+	text-align: center;
+}
+#activityText {
+	vertical-align: top;
+	display: inline-block;
+	width:50%;
+}
+#actualTextTop{
+	text-align: left;
+	font-size: 30px;
+	display: inline-block;
+	width:100%;
+	margin: -30px 0 0 0;
+}
+#actualText {
+	text-align: justify;
+	font-size: 15px;
+	display: inline-block;
+	width:100%;
+	margin: -30px 0 0 -12%;
+	min-width: 300px;
+}
+#slideshow {
+	display: block;
+	width:250px;
+	margin:auto;
+	padding-left: 50px;
+	padding-right: 50px;
+	display: inline-block;
+}
+#arrowText{
+	display: inline-block;
+	font-size: 10px;
+}
+
+
+#contactPicture{
+	border: 100px;
+	border-radius: 10px;
+	background: rgba(0,0,0,.5);
+	width:225px;
+	height: 225px;
+	vertical-align: top;
+	text-align: center;
+	margin: 10px;
+	margin-top: 35px;
+	display:block;
+	overflow:none;
+	margin:auto;
+}
+#ContactSect {
+	min-height: 650px;
+}
+
+#endContact {
+	margin-left: 20px;
+	font-family: 'Euphemia UCAS',serif;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	cursor: pointer;
+	z-index: 1;
+}
+#recentSection3 {
+	width: 50%;
+	background-color: rgba(0,0,0,.5);
+	border-radius: 10px;
+	margin-top: 20px;
+	margin-bottom:50px;
+	display: block;
+	text-align: center;
+	min-width: 1000px;
+}
+
+#recentText3aT {
+	width:100%;
+	font-size: 25px;
+	text-align: left;
+	color: white;
+	margin-top: -2%;
+	margin-bottom: 0px;
+	overflow: auto;
+}
+#recentText3a {
+	width:100%;
+	font-size: 15px;
+	text-align: left;
+	color: #e6e6e6;
+	margin-top: -5%;
+	margin-bottom: 1px;
+	overflow: auto;
+}
+#recentText3b {
+	width:100%;
+	font-size: 20px;
+	text-align: left;
+	color: white;
+	margin-top: -2%;
+	margin-bottom: 0px;
+}
+#recentText3c {
+	width:100%;
+	font-size: 20px;
+	text-align: left;
+	color: white;
+	margin-top: -2%;
+	margin-bottom: 30px;
+}
+
+}
+
+@media only screen and (max-width: 920px), screen and (min-width: 730px){
+#ProjectsSect {
+	height:40%;
+	min-height:550px;
+	text-align: center;
+}
+#activityImgDiv {
+	vertical-align: top;
+	margin: auto;
+	display: table;
+	width:20%;
+	text-align: center;
+}
+#activityText {
+	vertical-align: top;
+	display: inline-block;
+	width:50%;
+}
+#actualTextTop{
+	text-align: left;
+	font-size: 30px;
+	display: inline-block;
+	width:100%;
+	margin: -30px 0 0 0;
+}
+#actualText {
+	text-align: justify;
+	font-size: 15px;
+	display: inline-block;
+	width:100%;
+	margin: -30px 0 0 -12%;
+	min-width: 300px;
+}
+#slideshow {
+	display: block;
+	width:250px;
+	margin:auto;
+	padding-left: 50px;
+	padding-right: 50px;
+	display: inline-block;
+}
+#arrowText{
+	display: inline-block;
+	font-size: 10px;
+}
+}
+
+@media only screen and (max-width: 722px){
+	#ProjectsSect {
+	height:40%;
+	min-height:850px;
+	text-align: center;
+}
 }

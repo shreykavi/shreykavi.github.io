@@ -150,7 +150,7 @@ margin-bottom: 15px;
 	font-size: 25px;
 	text-align: left;
 	color: white;
-	margin-bottom: -5%;
+	margin-bottom: 0%;
 
 }
 #recentText2 {
@@ -159,7 +159,7 @@ margin-bottom: 15px;
 	font-size: 15px;
 	text-align: justify;
 	color:white;
-	margin-top: -3%;
+	margin-top: 0%;
 }
 
 #ProjectsSect {
@@ -261,7 +261,7 @@ margin-bottom: 15px;
 	font-size: 20px;
 	text-align: left;
 	color: #e6e6e6;
-	margin-top: -5%;
+	margin-top: -2%;
 	margin-bottom: 1px;
 	overflow: auto;
 }

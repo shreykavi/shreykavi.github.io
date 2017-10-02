@@ -5,10 +5,14 @@ $(document).ready(function() {
     var windowWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width,
     windowHeight = (window.innerHeight > 0) ? window.innerHeight : screen.height;
 
+    // Get heights
+    var SkillsSection = $("#SkillsSection").offset();
+    var ExperienceSection = $("#ExperienceSection").offset();
+
     $(window).scroll(function(){
         //parallax mountains and sky effect
         var scrollTop = $(this).scrollTop();
-        console.log(scrollTop);
+        // console.log(scrollTop);
         if(scrollTop >= windowHeight/5){
            $('#sky').css({fill:'#8FD1F2'});
          }
@@ -53,7 +57,7 @@ $(document).ready(function() {
         );
 
         //animations for skills pullup and moving stuff
-        if(scrollTop > 800 && !disappearedDIV){
+        if(scrollTop > (SkillsSection.top - 300) && !disappearedDIV){
             disappearedDIV = true;
             $('#disappearing_div_one').velocity(
               { height : 0 },
@@ -67,7 +71,7 @@ $(document).ready(function() {
               { duration: 0 }
             );
         }
-        if(scrollTop > 800){
+        if(scrollTop > (SkillsSection.top - 100)){
             $('#shovel').velocity(
               { rotateZ : "30" },
               { duration: 500, easing:"linear", loop: 40, delay: 2000 }
@@ -79,7 +83,7 @@ $(document).ready(function() {
         }
 
         //experiences animations
-        if(scrollTop > 2450 && !disappearedDIV2){
+        if(scrollTop > (ExperienceSection.top - 1200) && !disappearedDIV2){
             $('.expanding_div').velocity(
               { width : "75%" },
               { duration: 800 }

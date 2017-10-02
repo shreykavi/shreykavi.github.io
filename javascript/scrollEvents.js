@@ -53,11 +53,11 @@ $(document).ready(function() {
         );
 
         //animations for skills pullup and moving stuff
-        if(scrollTop > 900 && !disappearedDIV){
+        if(scrollTop > 800 && !disappearedDIV){
             disappearedDIV = true;
             $('#disappearing_div_one').velocity(
               { height : 0 },
-              { duration: 800 }
+              { duration: 650 }
             );
         }
         if(scrollTop < 100 && disappearedDIV){
@@ -80,7 +80,6 @@ $(document).ready(function() {
 
         //experiences animations
         if(scrollTop > 2450 && !disappearedDIV2){
-            disappearedDIV2 = true;
             $('.expanding_div').velocity(
               { width : "75%" },
               { duration: 800 }
@@ -93,9 +92,9 @@ $(document).ready(function() {
               $('.experience').fadeTo("slow", 1);
               $('.small-text').fadeTo("slow", 1);
             }, 790);
+            disappearedDIV2 = true;
         }
         if (scrollTop < 1680 && disappearedDIV2){
-            disappearedDIV2 = false;
             $('.expanding_div').velocity(
               { width : 0 },
               { duration: 0 }
@@ -105,6 +104,7 @@ $(document).ready(function() {
               $('.experience').fadeTo("fast", 0);
               $('.small-text').fadeTo("fast", 0);
             }, 0);
+            disappearedDIV2 = false;
         }
 
         //nav bar
@@ -125,7 +125,7 @@ $(document).ready(function() {
           );
           navOn = true;
         }
-        if(scrollTop < 560 && navOn){
+        if(scrollTop < 530 && navOn){
           $('#nav').css('display','none');
           $('#nav').css('display','block').velocity(
             { translateX : -1000 },

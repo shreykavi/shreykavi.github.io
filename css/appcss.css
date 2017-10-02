@@ -125,6 +125,13 @@ li :hover {
   margin: 10px;
   opacity: 0;
 }
+.experience-details p{
+  position:absolute;
+  font-size: 16px;
+  font-family: Quicksand,serif;
+  color: white;
+  padding: 10px;"
+}
 .experience-details:hover {
   /*cursor: pointer;*/
   border-style: solid;
@@ -161,6 +168,15 @@ li :hover {
 #undermountain {
   height:1000px;
   margin:0;
+}
+
+#undermountain p {
+  font-size:35px;
+  font-family: Quicksand,serif;
+  color:white;
+  line-height:100px;
+  left:50px; 
+  position:absolute
 }
 
 #disappearing_div_one {

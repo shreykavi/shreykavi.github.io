@@ -1,0 +1,11 @@
+#shovel {
+  transform-origin: 50% 50%;
+}
+
+#axe {
+  transform-origin: 50% 50%;
+}
+
+#undermountain{
+  background: linear-gradient(black, #331a00, #331a00);
+}

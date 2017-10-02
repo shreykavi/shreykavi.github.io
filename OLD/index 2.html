@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<title>Shrey Kavi</title>
+
+		<!--Import for CSS style sheet-->
+	 	<link href="Styles/main.css" rel="stylesheet" type="text/css" >
+
+	 	<!--Import for Lobster Font-->
+	 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster">
+	</head>
+
+		<!--Setup for mobile nav bar-->
+		<div class="pageTopBar hamOption">
+			<div id="titleName"><a id="Intro" href="#IntroSect" class="title"><img src="Images/toplogo.png"></a><a id="Intro" href="#IntroSect" class="topText">Shrey Kavi</a></div>
+		</div>
+		<a class="menuNav">
+			<img src="Images/1483760941_menu-alt2.png">
+		</a>
+			<!--Hamburger dropdown menu-->
+			<ul class="Hamburger">
+				<li><a id="About" href="#AboutSect" class="nextPage hamOption">About Me</a></li>
+				<li><a id="Recent" href="#RecentSect" class="nextPage hamOption">Recent Work</a></li>
+				<li><a id="Projects" href="#ProjectsSect" class="nextPage hamOption">Projects</a></li>
+				<li><a id="Hack" href="#HackSect" class="nextPage hamOption">Hackathons</a></li>
+				<li><a id="Contact" href="#ContactSect" class="nextPage hamOption">Contact</a></li>
+			</ul>
+		<!--Regularly sized nav bar-->
+		<nav>
+			<ul>
+				<li><a id="Intro" href="#IntroSect" class="nextPage"><img src="Images/logo.png"/></a></li>
+				<li><a id="About" href="#AboutSect" class="nextPage">About Me</a></li>
+				<li><a id="Recent" href="#RecentSect" class="nextPage">Recent Work</a></li>
+				<li><a id="Projects" href="#ProjectsSect" class="nextPage">Projects</a></li>
+				<li><a id="Hack" href="#HackSect" class="nextPage">Hackathons</a></li>
+				<li><a id="Contact" href="#ContactSect" class="nextPage">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!--Intro Section-->
+		<div id="IntroSect" class="sect sect1">
+			<img src="Images/logoOG.png" id="introLogo">
+			<div id="titleName"><font class="titleText">Shrey Kavi</font></div>
+		</div>
+
+		<div id="AboutSect" class="subSection">
+			<h1>About</h1>
+		</div>
+
+		<div id="RecentSect" class="sect sect2">
+			
+		</div>
+
+		<div id="ProjectsSect" class="subSection">
+			
+		</div>
+
+		<div id="HackSect" class="sect sect3">
+			
+		</div>
+
+		<div id="ContactSect" class="subSection">
+			
+		</div>
+	</body>
+</html>
+
+<script src="jquery.js"></script>
+
+<script>
+// how to declare jquery function: $(document).ready(function(){
+//use this as shortcut
+$(function() {
+	//scrolls on refresh
+	scrollToTop();
+
+	//navbar animation
+	miniNavClick();
+
+	//Calls scrolling for navbar options
+	navScrolling();
+});
+
+//Function for scrolling to Top on Refresh
+function scrollToTop() {
+	$(document).ready(function(){
+	    $(this).scrollTop(0);
+	});
+}
+
+//Function for scrolling when nav options clicked
+function navScrolling() {
+	$(".nextPage").click(function(e){
+		e.preventDefault();
+		var sectionID = e.currentTarget.id + "Sect";
+		$("html body").animate({
+			scrollTop: $("#" + sectionID).offset().top
+		}, 450)
+	})
+
+	$(".title").click(function(e){
+		e.preventDefault();
+		var sectionID = e.currentTarget.id + "Sect";
+		$("html body").animate({
+			scrollTop: $("#" + sectionID).offset().top
+		}, 450)
+	})
+
+	$(".topText").click(function(e){
+		e.preventDefault();
+		var sectionID = e.currentTarget.id + "Sect";
+		$("html body").animate({
+			scrollTop: $("#" + sectionID).offset().top
+		}, 450)
+	})
+}
+
+//Function for hamburger button
+function miniNavClick() {
+	//initially hides Hamburger
+	$(".Hamburger").hide();
+
+	//On click it either displays or hides hamburger
+	$(".menuNav").click(function(){
+		if ( !$(".Hamburger").is(':hidden') ){
+			$(".Hamburger").hide(300);
+		}
+		else{
+			$(".Hamburger").show(300);
+		}
+	})
+
+
+	//When click outside hamburger
+	$(document).mouseup(function (e)
+	{
+	    var container = $(".Hamburger");
+
+	    if (!container.is(e.target) // if the target of the click isn't the container...
+	        && container.has(e.target).length === 0) // ... nor a descendant of the container
+	    {
+	        container.hide(300);
+	    }
+	});
+
+	//When screensize changed hide hamburger
+        $( window ).resize(function(){
+        	$(".Hamburger").hide(300);
+        });
+}
+
+/*NOTES:
+	auto scrolling fucks up with nav bar
+*/
+
+</script>
+
+

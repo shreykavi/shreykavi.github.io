@@ -171,11 +171,11 @@ li :hover {
 }
 
 #undermountain p {
-  font-size:35px;
+  font-size:25px;
   font-family: Quicksand,serif;
   color:white;
   line-height:100px;
-  left:50px; 
+  left:50px;
   position:absolute
 }
 

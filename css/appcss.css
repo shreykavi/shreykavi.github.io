@@ -12,13 +12,16 @@ div {
 html, body {
     width: 100%;
     margin: 0 auto;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative;
 }
 
 h1 {
   padding:50px;
   padding-left: 100;
   color: #ffffff;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size:100px;
   text-align: center;
   vertical-align:middle;
@@ -33,18 +36,18 @@ h2 {
 nav {
   margin: 0;
   position: fixed;
-  width:400px;
+  width:100%;
   overflow: hidden;
-  height: 100px;
+  height: 68px;
   z-index: 99;
-  float: left;
+  /* float: left; */
   background-color: white;
   opacity: 0.75;
   display: none;
 }
 ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 0 70px;
   padding: 10px;
   /*height: 60px;*/
   padding:0;
@@ -53,22 +56,40 @@ li {
   margin: 0;
   display: inline;
   float: left;
-  height:100px;
+  height:auto;
   width: 100px;
   cursor: pointer;
   text-align: center;
 }
 .logo {
-  margin: 0;
+  margin: 10px;
   position: fixed;
+  height: auto;
+  width: 100px;
+  z-index: 100;
+}
+#logo{
+  width: 50%;
+}
+.ContactMe {
+  position: fixed;
+  left:85%;
   height: auto;
   width: auto;
   z-index: 100;
+  font-size: 20px;
+  color: black;
+  background: grey;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  opacity: 0.5;
+  vertical-align: top;
 }
 .navlink {
   display:block;
   color:black;
-  line-height: 100px;
+  line-height: 80px;
 }
 li :hover {
   background-color:#DCDCDC;
@@ -80,11 +101,32 @@ li :hover {
 
 .TitleText {
     position:absolute;
-    font-family: Lobster,serif;
-    z-index: 100;
+    font-family: Raleway,serif;
+    z-index: 99;
     width:100%;
     text-align:center;
 }
+
+.DinoText {
+    position:absolute;
+    font-family: Abril Fatface,serif;
+    z-index: 0;
+    width:35%;
+    text-align:right;
+    font-size: 8vh;
+    padding: 90px 0px 0px 0px;
+}
+
+.DinoText2 {
+    position:absolute;
+    font-family: Raleway,serif;
+    z-index: 0;
+    width:35%;
+    text-align:right;
+    font-size: 3.5vh;
+    padding: 25% 0px 0 25px;
+}
+
 .small-text{
   height: 100px;
   font-size: 20px;
@@ -159,26 +201,72 @@ li :hover {
 }
 
 .contact {
-  height:505px;
+  height:65%;
   background-color: #8B8D7A;
   border: solid;
   border-color: black;
 }
 
+.contactGreeting {
+  font-size:50px;
+  text-align:center;
+  padding-bottom: 0;
+  vertical-align: middle;
+}
+
 #undermountain {
-  height:1000px;
+  height:100px;
+  width: auto;
   margin:0;
 }
 
 #undermountain p {
-  font-size:25px;
-  font-family: Quicksand,serif;
+  font-size:60px;
+  font-family: Raleway;
   color:white;
-  line-height:100px;
+  line-height:65px;
   left:50px;
-  position:absolute
+  /* position:absolute; */
+  text-align: center;
 }
 
 #disappearing_div_one {
-  height:1000px; background-color:black;
+  background-color:black;
+}
+
+@media only screen and (max-width: 650px) {
+  .DinoText{
+    font-size: 6vh;
+  }
+  .DinoText2{
+    padding: 75% 0 0 25px;
+  }
+  .contactGreeting {
+    font-size:40px;
+    padding-top: 0;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .ContactMe {
+    left:80%;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .ContactMe {
+    left:70%;
+  }
+}
+
+@media only screen and (max-width: 455px) {
+  .ContactMe {
+    left:60%;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .ContactMe {
+    left:55%;
+  }
 }

@@ -75,7 +75,7 @@ function getDetails(experience) {
         "API Testing, Performance Testing, Automated Testing, C#, Java";
       returnDetails.small_description = "Software Engineering in Test";
       returnDetails.large_description =
-        "Worked in an Agile Environment with daily Scrum updates.<br><br>Designed automated testing scripts for Web Environment Testing using C# and Gherkin Feature Scripts in Microsoft Visual Studio.<br><br>Helped develop Testing Framework with Apache JMeter for automating API Testing. It inputted and outputted from CSV files so anyone setup automated tests.<br><br>Closely worked with developers to make sure API's were functional and were free of defects. Small exposure to Oracle SQL Databases and API development.";
+        "Worked in an Agile Environment with daily Scrum updates.<br><br>Designed automated testing scripts using C#.<br><br>Develop Testing Framework with Apache JMeter for automating API Testing. It inputted and outputted from CSV files so anyone could setup automated tests.<br><br>Worked with developers to make sure API's were functional and free of defects. Small exposure to Oracle SQL Databases and API development.";
       break;
     case "plan_group":
       returnDetails.title = "Plan Group";
@@ -301,7 +301,6 @@ $(document).ready(function() {
 
   //initialize experience details
   var detailsOn = false;
-
   $(".experience-details").velocity({ translateX: 2000 }, { duration: 0 });
 
   //experience details pop up
@@ -319,7 +318,7 @@ $(document).ready(function() {
 
     if (detailPanel == "#experience-work") {
       var html_element =
-        '<div class="col-lg-5 col-md-5 col-sm-12" style="vertical-align: middle; display: flex; flex-direction: column; align-items: center; justify-content: center;">\n<img class="experience-details-image" src="' +
+        '<div class="col-lg-5 col-md-4 col-sm-4 col-xs-12" style="vertical-align: middle; display: flex; flex-direction: column; align-items: center; justify-content: center;">\n<img class="experience-details-image" src="' +
         temp.image +
         '">\n<p class="experience-details-title">' +
         temp.title +
@@ -329,14 +328,14 @@ $(document).ready(function() {
         temp.date +
         "<br>" +
         temp.location +
-        '</p>\n</div>\n<div class="col-lg-7 col-md-7 col-sm-12" style="vertical-align: middle; display: flex; flex-direction: column; align-items: center; justify-content: center;">\n<p class="experience-details-large">' +
+        '</p>\n</div>\n<div class="col-lg-7 col-md-8 col-sm-8 col-xs-12" style="vertical-align: middle; display: flex; flex-direction: column; align-items: center; justify-content: center;">\n<p class="experience-details-large">' +
         temp.large_description +
         "<br><br>[ " +
         temp.tech +
         ' ]</p>\n<p ><br></p></div>"';
     } else {
       var html_element =
-        '<div class="col-lg-5 col-md-5 col-sm-12" style="vertical-align: middle; display: flex; flex-direction: column; align-items: center; justify-content: center;">\n<img class="experience-details-image" src="' +
+        '<div class="col-lg-5 col-md-4 col-sm-4 col-xs-12" style="vertical-align: middle; display: flex; flex-direction: column; align-items: center; justify-content: center;">\n<img class="experience-details-image" src="' +
         temp.image +
         '">\n<p class="experience-details-title">' +
         temp.title +
@@ -345,7 +344,7 @@ $(document).ready(function() {
         '</p>\n<p class="experience-details-date">' +
         temp.date +
         "<br>" +
-        '</p>\n</div>\n<div class="col-lg-7 col-md-7 col-sm-12" style="vertical-align: middle; display: flex; flex-direction: column; align-items: center; justify-content: center;">\n<p class="experience-details-large">' +
+        '</p>\n</div>\n<div class="col-lg-7 col-md-8 col-sm-8 col-xs-12" style="vertical-align: middle; display: flex; flex-direction: column; align-items: center; justify-content: center;">\n<p class="experience-details-large">' +
         temp.large_description +
         "<br><br>[ " +
         temp.tech +

@@ -131,6 +131,9 @@ $(document).ready(function() {
       }, 500);
       //reset arrows to color
       $(".more_content").velocity({ color: "#000000" }, { duration: 1000 });
+      //reset horizontal experiences
+      $("#work-experiences").scrollLeft(0);
+      $("#project-experiences").scrollLeft(0);
       disappearedDIV2 = false;
     }
 

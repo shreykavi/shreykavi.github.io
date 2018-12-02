@@ -17,26 +17,17 @@
 
   <!-- My Imports -->
   <link rel="stylesheet" href="css/appcss.css">
-  <script src="javascript/introduction.js"></script>
-  <script src="javascript/scrollEvents.js"></script>
+  <script src="javascript/introduction.js"></script><script src="javascript/scrollEvents.js"></script><script src="javascript/clickEvents.js"></script>
 </head>
 
 <body style="overflow:hidden">
-  <div id="ContactMe" class="ContactMe" align="right"><a style="font-size:20px; color:white; width:100%; font-family: Quicksand,serif;" href="mailto:shrey.kavi@gmail.com?subject=Your websites beautiful!">Contact Me</a></div>
+  <div class="ContactMe" align="right"><a style="font-size:20px; color:white; width:100%; font-family: Quicksand,serif;" href="mailto:shrey.kavi@gmail.com?subject=Your website's beautiful!">Contact Me</a></div>
 
   <div class="logo" >
-    <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="-50 280 700 10" xml:space="preserve" x="0" y="0">
-      <path class="logoBlock" d="M107.783 571.3L.14 468.897 442.536 3.87l107.642 102.405z"/>
-      <path class="logoBlock" d="M550.317 464.683L442.754 567.17 0 102.487 107.563 0z"/>
-      <text class="logoS" x="172.89" y="393.446" style="line-height:125%" transform="scale(1.0839 .9226)" font-size="52.983" letter-spacing="0" word-spacing="0" font-family="sans-serif">
-        <tspan x="172.89" y="393.446" fill="#fff" style="line-height:125%;-inkscape-font-specification:'Hiragino Kaku Gothic StdN Ultra-Bold';text-align:start" font-weight="800" font-size="215.245" font-family="Hiragino Kaku Gothic StdN">S</tspan>
-      </text>
-    </svg> -->
     <img id="logo" src="pics/logo.png" alt="">
   </div>
   <nav id="nav" >
     <ul>
-      <!-- <li><a id="Intro" href="" class="navlink"></a></li> -->
       <li><a id="Skills" href="" class="navlink">Overview</a></li>
       <li><a id="Experience" href="" class="navlink">Experience</a></li>
       <li><a id="Contact" href="" class="navlink">Me</a></li>
@@ -48,9 +39,6 @@
     <?xml version="1.0" encoding="iso-8859-1"?>
     <!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-    <!-- <div class="col-lg-12 col-md-12 col-sm-12"> -->
-
-
     <div class="svg-contain" style="min-width:1919.963">
         <p class="TitleText" id="title" style="font-size: 100px; color: black; top:60px">SHREY KAVI</p>
         <p class="TitleText" id="desc" style="font-size: 50px; color: white; top:180px">Software Developer.</p>
@@ -123,17 +111,15 @@
     <div id="disappearing_div_one"></div>
     <div id="undermountain">
     <div class="row">
-      <div class="col-lg-3 col-md-3 col-sm-3"></div>
-    </div>
   </section>
 
   <!-- Inbetween Section -->
   <!-- dinosaur svg -->
   <section id="SkillsSection">
     <div class="svg-contain" style="min-width:1919.963">
-        <p id="DinoText" class="DinoText" style="color: white;">Seeking<br>Internships</p>
+        <p id="DinoText" class="DinoText">Seeking<br>Internships</p>
         <div id="spacer" style="width: 200px; height: 20px; position: absolute;"></div>
-        <p id="DinoText2" class="DinoText2" style="color: #DDC69C;">
+        <p id="DinoText2" class="DinoText2">
           Web Applications. <br><br> Machine Learning. <br><br> Artificial Intelligence. <br><br> Robot Operating System. <br><br> Microcontroller Firmware.
         </p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.034443337 1.0266181 755.55506 388.83726" height="100vh">
@@ -197,160 +183,44 @@
   <!-- Experiences -->
   <section id="ExperienceSection">
     <div style="height:100px; background-color:#331a00;">
-        <p class="small-text">*hover over experience to see more details*</p>
+        <p class="small-text">*click experience to see more details*</p>
     </div>
 
     <!-- work experiences -->
-    <div style="height:450px; background-color:#331a00;" id="experiences">
+    <div id="experiences">
       <div style="width:4%; display:inline-block">
-          <p style="font-family: Quicksand,serif; width:40px; height:380px;vertical-align:text-top; padding-left:20px; text-align:center; writing-mode: vertical-lr; text-orientation: sideways-right; color:white; font-size:30px">Work</p>
+          <p class="experience-type">Work</p>
       </div>
       <div style="width:9%; display:inline-block">
-          <div class="border" style="border-style: solid none solid solid;"></div>
+          <div class="border" style="border-style: solid none solid solid;"><a id="work-arrow-l" class="more_content"></a></div>
       </div>
-      <div class="expanding_div"></div>
-      <div class="hiding_div">
-            <div style="width:26%; display:inline-block; position:absolute">
-                <div class="experience">
-                    <div class="experience-logo">
-                      <img src="pics/RBC_logo.png" alt="" style="height: 200px;">
-                    </div>
-                    <div class="">
-                      <p style="font-size:24px; color:white; font-family: Quicksand,serif; text-align: center;">RBC Global Assest Management</p>
-                      <p style="font-size:20px; color:black; font-family: Quicksand,serif; text-align: center;">Web Developer</p>
-                    </div>
-                </div>
-            </div>
-            <div style="width:26%; display:inline-block; position:relative">
-                <div class="experience-details">
-                  <p>
-                    -Full-stack development for applications used by thousands of advisors.<br>
-                    -Reconstructed third-party web tools using React framework.<br>
-                    -Backend technologies included Laravel (PHP) and Node.js.<br>
-                    -Helped build and add numerous features to existing tools.<br>
-                    -Pushed apps to production.<br>
-                    -Patched critical bugs under time constraints.<br>
-                    -Worked with Git for version control.<br>
-                  </p>
-                </div>
-            </div>
-            <div style="width:26%; display:inline-block; position:absolute">
-              <div class="experience">
-                  <div class="experience-logo">
-                    <img src="pics/D+H_logo.png" alt="" style="height: 80px;">
-                  </div>
-                  <div class="">
-                    <p style="font-size:24px; color:white; font-family: Quicksand,serif; text-align: center;">Davis & Henderson</p>
-                    <p style="font-size:20px; color:black; font-family: Quicksand,serif; text-align: center;">Software Engineering in Test</p>
-                  </div>
-              </div>
-            </div>
-            <div style="width:26%; display:inline-block; position:relative">
-                <div class="experience-details">
-                  <p>
-                    -Worked in an Agile Environment with daily Scrum updates.<br>
-                    -Designed automated testing scripts for Web Environment Testing using C# and Gherkin Feature Scripts in Microsoft Visual Studio.<br>
-                    -Helped develop Testing Framework with Apache JMeter for company to use for API Testing.<br>
-                    -Closely worked with developers to make sure API's were functional and were free of defects.<br>
-                    -Small exposure to Oracle SQL Databases and API development.<br>
-                  </p>
-                </div>
-            </div>
-            <div style="width:26%; display:inline-block; position:absolute">
-              <div class="experience">
-                  <div class="experience-logo">
-                    <img src="pics/Plan_logo.png" alt="" style="height: 140px;">
-                  </div>
-                  <div class="">
-                    <p style="font-size:24px; color:white; font-family: Quicksand,serif; text-align: center;">Plan Group</p>
-                    <p style="font-size:20px; color:black; font-family: Quicksand,serif; text-align: center;">CAD Operator</p>
-                  </div>
-              </div>
-            </div>
-            <div style="width:26%; display:inline-block; position:relative">
-                <div class="experience-details">
-                  <p>
-                    -Utilized AutoCAD to complete drawings for records and manuals. <br>
-                    -Given responsibilities of dealing with complaints, design and formatting problems from various consultants and foremen, and making changes to current drawings.  <br>
-                    -Gained experience working with Single Line Diagram Schematics and coordinating them to Electrical design plans.  <br>
-                    -Designed parking sensor plans for company business proposals. <br>
-                    -Learned to coordinate work in a team environment. <br>
-                  </p>
-                </div>
-            </div>
+      <div id="experience-work" class="experience-details">
+        <!-- Dynamically filled using javascript -->
+      </div>
+      <div id="work-experiences" class="hiding_div">
+        <!-- Dynamically filled using javascript -->
       </div>
       <div style="width:9%; display:inline-block">
-          <div class="border" style="border-style: solid solid solid none;"></div>
+          <div class="border" style="border-style: solid solid solid none;"><a id="work-arrow-r" class="more_content">></a></div>
       </div>
     </div>
 
     <!-- personal experiences -->
-    <div style="height:450px; background:linear-gradient(#331a00, #201a00, #101a00);" id="experiences">
+    <div style="background:linear-gradient(#331a00, #201a00, #101a00);" id="experiences">
       <div style="width:4%; display:inline-block">
-          <p style="font-family: Quicksand,serif; width:40px; height:380px;vertical-align:text-top; padding-left:20px; text-align:center; writing-mode: vertical-lr; text-orientation: sideways-right; color:white; font-size:30px">Projects</p>
+          <p class="experience-type">Projects</p>
       </div>
       <div style="width:9%; display:inline-block">
-          <div class="border" style="border-style: solid none solid solid;"></div>
+          <div class="border" style="border-style: solid none solid solid;"><a id="project-arrow-l" class="more_content"></a></div>
       </div>
-      <div class="expanding_div"></div>
-      <div class="hiding_div">
-            <div style="width:26%; display:inline-block; position:absolute">
-                <div class="experience">
-                  <div class="experience-logo">
-                    <img src="pics/benny.png" alt="" style="height: 190px;">
-                  </div>
-                  <div class="">
-                    <p style="font-size:24px; color:white; font-family: Quicksand,serif; text-align: center;">Benny-bot</p>
-                    <p style="font-size:20px; color:black; font-family: Quicksand,serif; text-align: center;">Slackbot translates French to English</p>
-                  </div>
-                </div>
-            </div>
-            <div style="width:26%; display:inline-block; position:relative">
-                <div class="experience-details">
-                  <p>
-                    Slackbot translates French to English using Google Translation API with user confirmation system that asks biligual workers to confirm translations. Bot saves correct data and contributes to a growing database of translated data.
-                  </p>
-                </div>
-            </div>
-            <div style="width:26%; display:inline-block; position:absolute">
-                <div class="experience">
-                  <div class="experience-logo">
-                    <img src="pics/keil.png" alt="" style="height: 190px;">
-                  </div>
-                  <div class="">
-                    <p style="font-size:24px; color:white; font-family: Quicksand,serif; text-align: center;">Reaction Game</p>
-                    <p style="font-size:20px; color:black; font-family: Quicksand,serif; text-align: center;">Keil ARM microprocessor project</p>
-                  </div>
-                </div>
-            </div>
-            <div style="width:26%; display:inline-block; position:relative">
-                <div class="experience-details">
-                  <p>
-                    Keil ARM microprocessor used to capture user reaction times. Captured data is then taken as microseconds and displayed to LEDs in binary values. Program utilizes interrupt service routines, polling subroutines, and mapping.
-                  </p>
-                </div>
-            </div>
-            <div style="width:26%; display:inline-block; position:absolute">
-                <div class="experience">
-                  <div class="experience-logo">
-                    <img src="pics/WaitLess.png" alt="" style="height: 190px;">
-                  </div>
-                  <div class="">
-                    <p style="font-size:24px; color:white; font-family: Quicksand,serif; text-align: center;">WaitLess</p>
-                    <p style="font-size:20px; color:black; font-family: Quicksand,serif; text-align: center;">Automated restaurant attendant (Arduino)</p>
-                  </div>
-                </div>
-            </div>
-            <div style="width:26%; display:inline-block; position:relative">
-                <div class="experience-details">
-                  <p>
-                    HackTheNorth 2016 Project: Automated restaurant attendant using RC vehicle. Robot designed with Arduino C and Bluetooth communication from Android phones. Uses Dijkstra’s Algorithm to obtain shortest path and sends data to Arduino which then translates into motion and scans for obstacles using an ultrasonic sensor. Uses complex circuits for power management.
-                  </p>
-                </div>
-            </div>
+      <div id="experience-project" class="experience-details">
+        <!-- Dynamically filled using javascript -->
+      </div>
+      <div id="project-experiences" class="hiding_div">
+        <!-- Dynamically filled using javascript -->
       </div>
       <div style="width:9%; display:inline-block">
-          <div class="border" style="border-style: solid solid solid none;"></div>
+          <div class="border" style="border-style: solid solid solid none;"><a id="project-arrow-r" class="more_content">></a></div>
       </div>
     </div>
   </section>
@@ -359,17 +229,15 @@
   <section id="ContactSection">
       <div class="contact" style="">
         <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="col-lg-4 col-md-4 col-sm-12">
             <img style="height:501px; border: solid; border-color: black; border-left:0; border-top:0; border-bottom:0; " src="pics/me.png" alt="">
           </div>
-          <div class="col-lg-8 col-md-8 col-sm-8">
-            <h1 style="font-size:70px ;text-align:center; padding-bottom: 10px;">Please feel free to contact me!</h1>
-            <h2 style="padding:0; color:white; font-size:40px; text-align:center; font-family: Quicksand,serif;"><span style="padding:0; color:black">Shrey</span>
-              Kavi</h2>
+          <div class="col-lg-8 col-md-8 col-sm-12">
+            <h1 style="padding:0; color:black; font-size:30px; text-align:center; font-family: Quicksand,serif;">Hey, I'm Shrey!</h1>
+            <h2 style="font-size:20px ;text-align:center; padding: 0px; color: black">I'm an engineering student from the University of Waterloo.<br><br> I'm passionate about learning and applying new skills to solve real problems!<br><br>Please feel free to contact me.</h2>
             <div class="" style="text-align:center; ">
-              <a style="font-size:30px; color:white; width:100%; font-family: Quicksand,serif;" href="mailto:shrey.kavi@gmail.com">shrey.kavi@gmail.com</a>
+              <a style="font-size:30px; color:white; width:100%; font-family: Quicksand,serif;" href="mailto:shrey.kavi@gmail.com?subject=Your website's beautiful!">shrey.kavi@gmail.com</a>
             </div>
-            <!-- Quicksand|Fjalla+One|Raleway|Open+Sans -->
             <br>
             <div class="" style="height: 100px; text-align:center;">
               <a href="Files/Resume.pdf" target="_blank"><img class="imglink" id="resume" src="pics/resume.png" style="height: 100px;"
@@ -380,27 +248,6 @@
                   style="height: 100px;" alt=""></a>
             </div>
             <p id="imglinkdesc" style="text-align: center; font-size: 12px">*hover over for descriptions*</p>
-            <script type="text/javascript">
-              $(document).ready(function () {
-                $('.imglink').mouseenter(function () {
-                  switch ($(this).attr("id")) {
-                    case "linkedin":
-                      $('#imglinkdesc').html('*click for linkedin*');
-                      break;
-                    case "github":
-                      $('#imglinkdesc').html('*click for github*');
-                      break;
-                    case "resume":
-                      $('#imglinkdesc').html('*click for resume*');
-                      break;
-                    default:
-                      break;
-                  }
-                }).mouseleave(function () {
-                  $('#imglinkdesc').html('*hover over for descriptions*');
-                });
-              });
-            </script>
           </div>
         </div>
       </div>

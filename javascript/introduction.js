@@ -82,10 +82,10 @@ $(document).ready(function() {
   }, 1300);
 
   //ContactMe button
-  $("#ContactMe").velocity({ translateY: -200 }, { duration: 1, loop: false });
+  $(".ContactMe").velocity({ translateY: -200 }, { duration: 1, loop: false });
   $("#logo").velocity({ translateY: -200 }, { duration: 1, loop: false });
   setTimeout(function() {
-    $("#ContactMe")
+    $(".ContactMe")
       // .velocity({ translateY: -200 }, { duration: 1, loop: false })
       .velocity({ translateY: 10 }, { duration: 450, loop: false })
       .velocity({ translateY: 0 }, { duration: 50, loop: false });

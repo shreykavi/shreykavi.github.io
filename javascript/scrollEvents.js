@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var disappearedDIV = false;
-  var disappearedDIV2 = false;
+  var disappearedDIV2 = true;
   var navOn = false;
   var logoChanged = false;
   var skillsAnimated = false;
@@ -14,7 +14,7 @@ $(document).ready(function() {
 
   $(window).scroll(function() {
     var scrollTop = $(this).scrollTop();
-    console.log(scrollTop);
+    // console.log(scrollTop); //Very useful for scroll dev
 
     //parallax mountains and sky effect
     if (scrollTop >= windowHeight / 5) {
@@ -59,26 +59,17 @@ $(document).ready(function() {
       { duration: 1, loop: false }
     );
 
-    //animations for skills pullup and moving stuff
+    //animations for skills div pullup and moving stuff
     //CHANGED: now moves based on scrollTop
     if (
       windowWidth > 600 &&
-      1200 - 1.3 * scrollTop > 0 &&
+      1000 - 1.3 * scrollTop > 0 &&
       scrollTop < SkillsSection.top
     ) {
-      $("#disappearing_div_one").height(1200 - 1.3 * scrollTop);
+      $("#disappearing_div_one").height(1000 - 1.3 * scrollTop);
     }
 
-    // if (scrollTop > SkillsSection.top - 300 && !disappearedDIV) {
-    //   disappearedDIV = true;
-    //   $("#disappearing_div_one").velocity({ height: 0 }, { duration: 400 });
-    // }
-    // if (scrollTop < 100 && disappearedDIV) {
-    //   disappearedDIV = false;
-    //   $("#disappearing_div_one").velocity({ height: 1500 }, { duration: 0 });
-    // }
-
-    //skills animations
+    //DinoText animation
     if (!skillsAnimated) {
       if (scrollTop > SkillsSection.top - 100) {
         $("#DinoText").velocity(
@@ -93,43 +84,50 @@ $(document).ready(function() {
       }
     }
 
+    //reset DinoText
+    if (scrollTop < SkillsSection.top - 350) {
+      $("#DinoText").velocity(
+        { translateY: 1500 },
+        { duration: 1, loop: false }
+      );
+      $("#DinoText2").velocity(
+        { translateY: 1500 },
+        { duration: 1, loop: false }
+      );
+      skillsAnimated = false;
+    }
+
     //experiences animations
     if (scrollTop > ExperienceSection.top - 200 && !disappearedDIV2) {
-      $(".expanding_div")
-        .velocity({ width: "75%" }, { duration: 800 })
-        .velocity({ width: 0 }, { duration: 0 });
+      $(".hiding_div").velocity({ width: "100%" }, { duration: 500 });
       setTimeout(function() {
-        $(".hiding_div").css("display", "inline");
         $(".experience").fadeTo("fast", 1);
         $(".small-text").fadeTo("fast", 1);
-      }, 790);
+      }, 490);
       disappearedDIV2 = true;
     }
     if (scrollTop < 800 && disappearedDIV2) {
-      $(".expanding_div").velocity({ width: 0 }, { duration: 0 });
+      $(".hiding_div").velocity({ width: 0 }, { duration: 0 });
       setTimeout(function() {
-        $(".hiding_div").css("display", "none");
         $(".experience").fadeTo("fast", 0);
         $(".small-text").fadeTo("fast", 0);
       }, 0);
+      $(".experience-details").velocity(
+        { translateX: 2000 },
+        { duration: 300 }
+      );
+      //reset small experience tip
+      $(".small-text").fadeTo("fast", 0);
+      setTimeout(function() {
+        $(".small-text").text("*click experience to see more details*");
+        $(".small-text").fadeTo("slow", 1);
+      }, 500);
       disappearedDIV2 = false;
     }
 
-    // //TODO: MAke logo disappear at bottom of site
-    // if ( (scrollTop+windowHeight+1000) > CreditsSection.top){
-    //   $('.logoBlock').velocity(
-    //     { translateX: -5000},
-    //     { duration: 200 }
-    //   );
-    //   $('.logoS').velocity(
-    //     { translateX: -5000},
-    //     { duration: 200 }
-    //   );
-    // };
-
     if (firstWidth == 0) {
       firstWidth = $("#logo").outerWidth();
-      console.log("Got first width " + firstWidth);
+      // console.log("Got first width " + firstWidth);
     }
 
     //DEPRECATED: Logo resize animation for nav bar
@@ -162,7 +160,7 @@ $(document).ready(function() {
     // }
 
     //nav bar
-    if (scrollTop > 790 && !navOn) {
+    if (scrollTop > 590 && !navOn) {
       $("#logo").velocity(
         { rotateZ: 180 },
         { duration: 500, easing: "linear", loop: false }
@@ -192,30 +190,5 @@ $(document).ready(function() {
         .velocity({ translateX: -2000 }, { duration: 400, loop: false });
       navOn = false;
     }
-
-    //reset DinoText
-    if (scrollTop < 500) {
-      $("#DinoText").velocity(
-        { translateY: 1500 },
-        { duration: 1, loop: false }
-      );
-      $("#DinoText2").velocity(
-        { translateY: 1500 },
-        { duration: 1, loop: false }
-      );
-      skillsAnimated = false;
-    }
-  });
-
-  //navlink scrolling
-  $(".navlink").click(function(e) {
-    e.preventDefault();
-    var sectionID = e.currentTarget.id + "Section";
-    console.log(sectionID);
-    var theOffset = $("#" + sectionID).offset();
-    if (sectionID == "ExperienceSection") {
-      theOffset.top = theOffset.top - 100;
-    }
-    $("html, body").animate({ scrollTop: theOffset.top }, 450);
   });
 });

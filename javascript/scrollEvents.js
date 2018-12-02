@@ -104,6 +104,13 @@ $(document).ready(function() {
         $(".experience").fadeTo("fast", 1);
         $(".small-text").fadeTo("fast", 1);
       }, 490);
+      //make arrows change color
+      setTimeout(function() {
+        $(".more_content")
+          .velocity({ color: "#FFFF00" }, { duration: 500 })
+          .velocity({ color: "#000000" }, { duration: 500 })
+          .velocity({ color: "#865b4b" }, { duration: 1000 });
+      }, 600);
       disappearedDIV2 = true;
     }
     if (scrollTop < 800 && disappearedDIV2) {
@@ -122,6 +129,8 @@ $(document).ready(function() {
         $(".small-text").text("*click experience to see more details*");
         $(".small-text").fadeTo("slow", 1);
       }, 500);
+      //reset arrows to color
+      $(".more_content").velocity({ color: "#000000" }, { duration: 1000 });
       disappearedDIV2 = false;
     }
 

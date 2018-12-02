@@ -89,6 +89,10 @@ li {
   opacity: 0.5;
   vertical-align: top;
 }
+.ContactMe-anchor{
+  font-size:20px; color:white; width:100%; font-family: Quicksand,serif;
+}
+
 .navlink {
   display: block;
   color: black;
@@ -149,16 +153,17 @@ li :hover {
   width: 50%;
   margin: 0 auto;
   height: 400px;
+  text-align: center;
 }
 .more_content {
-    color: black;
-    cursor: pointer;
-    font-size: 40px;
-    position: relative;
-    top: 40%;
+  color: black;
+  cursor: pointer;
+  font-size: 40px;
+  position: relative;
+  top: 40%;
 }
 .more_content:hover {
-    text-decoration:none;
+  text-decoration:none;
 }
 
 #experiences {
@@ -276,13 +281,24 @@ li :hover {
   text-align: center;
 }
 
-
-
 .contact {
+  display: flex;
+  justify-content: space-around;
   height: 65%;
   background-color: #8b8d7a;
   border: solid;
   border-color: black;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 30px;
+}
+.me-data {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.me-pic {
+  height:300px; border: 4px solid black; border-radius: 50%;
 }
 
 .contactGreeting {

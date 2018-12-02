@@ -281,10 +281,6 @@ $(document).ready(function() {
       $("#project-arrow-r").text(">");
     }
   });
-  // while (true) {
-  //   $(".more_content").velocity({ translateX: 10 }, { duration: 0 });
-  //   $(".more_content").velocity({ translateX: 0 }, { duration: 20 });
-  // }
 
   //scrolling from navbar
   $(".navlink").click(function(e) {

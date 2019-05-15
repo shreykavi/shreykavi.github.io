@@ -1,9 +1,9 @@
 //function for details object
 var jobs = ["clearpath", "miovision", "rbc", "d+h", "plan_group"];
 var projects = [
+  "thermonitor",
   "growbusy",
   "kirsch",
-  "thermonitor",
   "mp3",
   "benny",
   "keil",
@@ -92,8 +92,9 @@ function getDetails(experience) {
     case "growbusy":
       returnDetails.title = "growbusy";
       returnDetails.image = "pics/growbusy.png";
-      returnDetails.date = "October 2018 - Present";
-      returnDetails.tech = "Nativescript-Vue, Firebase, TBA";
+      returnDetails.date = "October 2018 - March 2019 (UNFINISHED)";
+      returnDetails.tech =
+        "Nativescript-Vue, NodeJS, ExpressJS, MongoDB, OAuth 2.0";
       returnDetails.small_description = "Business Scheduling App";
       returnDetails.large_description =
         "Full-stack mobile app (ios and android) with business and client facing sides.<br><br> Purpose is for service businesses to organize their operation and help interact with clients.<br><br>Leverages artificial intelligence to help businesses attract and manage their clients.";
@@ -110,11 +111,11 @@ function getDetails(experience) {
     case "thermonitor":
       returnDetails.title = "Thermonitor";
       returnDetails.image = "pics/thermonitor.png";
-      returnDetails.date = "January - March 2017 (UNFINISHED)";
+      returnDetails.date = "March 2019 - Present";
       returnDetails.tech = "ESP8266, FreeRTOS";
       returnDetails.small_description = "IOT Condition Tracker";
       returnDetails.large_description =
-        "ESP8266 WI-FI Module with FreeRTOS<br><br>Monitors the temperature and humidity of its environment and notifies consumers when conditions are outside of a desired range.";
+        "ESP8266 WI-FI Module with FreeRTOS and NodeJS backend<br><br>Monitors the temperature and humidity of its environment and notifies consumers when conditions are outside of a desired range.";
       break;
     case "mp3":
       returnDetails.title = "WAV Music Player";

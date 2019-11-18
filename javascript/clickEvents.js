@@ -1,6 +1,7 @@
 //function for details object
-var jobs = ["clearpath", "miovision", "rbc", "d+h", "plan_group"];
+var jobs = ["verkada", "clearpath", "miovision", "rbc", "d+h", "plan_group"];
 var projects = [
+  "sense",
   "thermonitor",
   "growbusy",
   "kirsch",
@@ -33,6 +34,17 @@ function getDetails(experience) {
   // returnDetails.large_description = "";
 
   switch (experience) {
+    case "verkada":
+      returnDetails.title = "Verkada";
+      returnDetails.image = "pics/verkada_logo.png";
+      returnDetails.date = "September - December 9";
+      returnDetails.location = "San Mateo, CA";
+      returnDetails.tech =
+        "Python, Flask, PostgreSQL, DynamoDB, Redis, CircleCI, Twilio, pytest, AWS";
+      returnDetails.small_description = "Backend Engineering";
+      returnDetails.large_description =
+        "Developed cross server services for features that interface client IoT devices.<br><br>Used historical camera captures to track paths of specific individuals on a floor plan.<br><br>Sharing feature grants external contacts with temporary access to secured content.<br><br>Test driven development with isolated unit tests and code reviews for daily releases.";
+      break;
     case "clearpath":
       returnDetails.title = "Clearpath Robotics Inc.";
       returnDetails.image = "pics/clearpath_logo.png";
@@ -89,6 +101,16 @@ function getDetails(experience) {
         "Addressed design and formatting concerns from various clients. These were then added to existing drawings which were used for construction.<br><br>Worked on Single Line Diagram Schematics for multiple clients.<br><br>Utilized AutoCAD to complete drawings for records and manuals.";
       break;
 
+    case "sense":
+      returnDetails.title = "Sense";
+      returnDetails.image = "pics/sense.png";
+      returnDetails.date = "June 2019 - Present";
+      returnDetails.tech =
+        "React, NodeJS, ExpressJS, MongoDB, OAuth 2.0, RaspberryPi, Websockets, Redis";
+      returnDetails.small_description = "IoT Development Platform";
+      returnDetails.large_description =
+        "Device pipelines realtime data from external hardware to a Node.js backend with dashboard for data visualization and public API for access to collected data.";
+      break;
     case "growbusy":
       returnDetails.title = "growbusy";
       returnDetails.image = "pics/growbusy.png";

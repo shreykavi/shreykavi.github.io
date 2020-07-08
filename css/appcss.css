@@ -133,8 +133,8 @@ li :hover {
   position: absolute;
   font-family: Abril Fatface, serif;
   z-index: 0;
-  width: 35%;
-  text-align: right;
+  width: 100%;
+  text-align: center;
   font-size: 7vh;
   padding: 90px 0px 0px 25px;
   color: white;
@@ -158,7 +158,7 @@ li :hover {
   padding-top: 30px;
   font-family: Quicksand, serif;
   opacity: 0;
-  color: #8b8d7a;
+  color: #414040;
 }
 
 .border {
@@ -181,7 +181,7 @@ li :hover {
 
 #experiences {
   height: 450px;
-  background-color: #331a00;
+  background-color: #151515;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -191,7 +191,7 @@ li :hover {
 .experience {
   border-style: solid;
   border-color: black;
-  background-color: #865b4b;
+  background-color: #67bbef;
   height: 380px;
   vertical-align: middle;
   margin: 10px;
@@ -208,7 +208,7 @@ li :hover {
   word-wrap: break-word;
 }
 .experience:hover {
-  background-color: #9c7364;
+  background-color: #5da6d4;
 }
 
 .experience-type {
@@ -229,7 +229,7 @@ li :hover {
   width: 84%;
   height: 400px;
   /* display: inline-block; */
-  background-color: #865b4b;
+  background-color: #67bbef;
   border-style: solid;
   border-color: black;
   z-index: 1;
@@ -247,28 +247,28 @@ li :hover {
 .experience-details-title {
   font-size: 30px;
   text-align: center;
-  color: white;
+  color: #151515;
   font-family: Quicksand, serif;
 }
 
 .experience-details-small {
   font-size: 22px;
   text-align: center;
-  color: black;
+  color: white;
   font-family: Quicksand, serif;
 }
 
 .experience-details-date {
   font-size: 13px;
   text-align: center;
-  color: black;
+  color: white;
   font-family: Quicksand, serif;
 }
 
 .experience-details-large {
   font-size: 16px;
   text-align: left;
-  color: white;
+  color: #151515;
   font-family: Quicksand, serif;
   padding: 20px;
   border-left: solid 2px;
@@ -298,7 +298,7 @@ li :hover {
 
 .experience-title {
   font-size: 24px;
-  color: white;
+  color: #151515;
   font-family: Quicksand, serif;
   text-align: center;
 }
@@ -306,7 +306,7 @@ li :hover {
 .experience-small {
   font-size: 20px;
   height: 60px;
-  color: black;
+  color: white;
   font-family: Quicksand, serif;
   text-align: center;
 }
@@ -315,7 +315,7 @@ li :hover {
   display: flex;
   justify-content: space-around;
   height: 65%;
-  background-color: #8b8d7a;
+  background-color: #67bbef;
   border: solid;
   border-color: black;
   flex-wrap: wrap;
@@ -333,13 +333,19 @@ li :hover {
   border-radius: 50%;
 }
 .me-text-1 {
-  font-size: 28px;
+  font-size: 36px;
   padding: 0;
-  color: black;
+  color: #151515;
   text-align: center;
   font-family: Quicksand, serif;
 }
 .me-text-2 {
+  font-size: 24px;
+  text-align: center;
+  padding: 0px;
+  color: white;
+}
+.me-text-3 {
   font-size: 18px;
   text-align: center;
   padding: 0px;
@@ -366,7 +372,8 @@ li :hover {
   height: 100px;
   width: auto;
   margin: 0;
-  background: linear-gradient(black, #331a00, #331a00);
+  /* background: linear-gradient(black, #331a00, #331a00); */
+  background: linear-gradient(black, #151515, #151515);
 }
 
 #undermountain p {
@@ -495,6 +502,9 @@ li :hover {
     font-size: 24px;
   }
   .me-text-2 {
+    font-size: 14px;
+  }
+  .me-text-3 {
     font-size: 14px;
   }
   .me-email {

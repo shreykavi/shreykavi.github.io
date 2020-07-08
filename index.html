@@ -8,8 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Imported libraries -->
-  <script src="libs/jquery-3.2.1.min.js"></script>
-  <script src="libs/velocity.min.js"></script>
+  <script src="libs/jquery-3.2.1.min.js"></script><script src="libs/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="css/animate.css">
   <!-- <link rel="stylesheet" href="css/animationscss.css"> -->
@@ -28,7 +27,7 @@
   </div>
   <nav id="nav" >
     <ul>
-      <li><a id="Skills" href="" class="navlink">Overview</a></li>
+      <!-- <li><a id="Skills" href="" class="navlink">Overview</a></li> -->
       <li><a id="Experience" href="" class="navlink">Experience</a></li>
       <li><a id="Contact" href="" class="navlink">Me</a></li>
     </ul>
@@ -115,7 +114,7 @@
 
   <!-- Inbetween Section -->
   <!-- dinosaur svg -->
-  <section id="SkillsSection">
+  <!-- <section id="SkillsSection">
     <div class="svg-contain" style="min-width:1919.963">
         <p id="DinoText" class="DinoText">Seeking<br>New-Grad Positions</p>
         <p id="DinoText2" class="DinoText2">
@@ -177,19 +176,19 @@
           </g>
         </svg>
     </div>
-  </section>
+  </section> -->
 
   <!-- Experiences -->
   <section id="ExperienceSection">
-    <div style="height:100px; background-color:#331a00;">
+    <div style="height:100px; background-color:#151515;">
         <p class="small-text">*click experience to see more details*</p>
     </div>
 
     <!-- work experiences -->
     <div id="experiences">
-      <div style="display:inline-block">
+      <!-- <div style="display:inline-block"> -->
           <p class="experience-type">Work</p>
-      </div>
+      <!-- </div> -->
       <div style="width:9%; display:inline-block">
           <div class="border" style="border-style: solid none solid solid;"><a id="work-arrow-l" class="more_content"></a></div>
       </div>
@@ -205,7 +204,7 @@
     </div>
 
     <!-- personal experiences -->
-    <div style="background:linear-gradient(#331a00, #201a00, #101a00);" id="experiences">
+    <div id="experiences">
       <div style="display:inline-block">
           <p class="experience-type">Projects</p>
       </div>
@@ -229,10 +228,9 @@
       <div class="contact">
           <img class="me-pic" src="pics/me.png" alt="">
         <div class="me-data">
-          <h1 class="me-text-1">Hey, I'm Shrey!</h1>
-          <h2 class="me-text-2">I'm an engineering student from the
-            University of Waterloo.<br><br> I'm passionate about learning and applying new skills to solve real problems!<br><br>Please
-            feel free to contact me.</h2>
+          <h1 class="me-text-1">Hi I'm Shrey.</h1>
+          <div id="typed" class="me-text-2"></div>
+          <h2 class="me-text-3">Email me if you're interested in building something</h2>
             <a class="me-email" href="mailto:shrey.kavi@gmail.com?subject=Your website's beautiful!">shrey.kavi@gmail.com</a>
           <br>
           <div class="" style="height: 100px; text-align:center;">
@@ -244,13 +242,19 @@
         </div>
       </div>
   </section>
+  <!-- <script type="module">
+    $('document').ready(function(){
+          // import Typed from './libs/typed';
+    })
+
+  </script> -->
 
   <!-- Credits Section -->
   <section id="CreditsSection">
-      <div style="height:60px; background-color:#01a2a6; border: solid; border-color: black; border-top:0">
+      <div style="height:60px; background-color:#151515; border: solid; border-color: black; border-top:0">
           <div class="row">
               <div class="col-lg-12">
-                  <p style="font-family: Quicksand,serif; font-size: 20px; vertical-align:middle; text-align:center; padding-top:10px; color:white;">2018-2019</p>
+                  <p style="font-family: Quicksand,serif; font-size: 20px; vertical-align:middle; text-align:center; padding-top:10px; color:#67bbef;">2020-2021</p>
               </div>
           </div>
       </div>

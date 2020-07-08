@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var disappearedDIV = false;
   var disappearedDIV2 = true;
   var navOn = false;
@@ -9,10 +9,10 @@ $(document).ready(function() {
     windowHeight = window.innerHeight > 0 ? window.innerHeight : screen.height;
 
   // Get heights
-  var SkillsSection = $("#SkillsSection").offset();
+  // var SkillsSection = $("#SkillsSection").offset();
   var ExperienceSection = $("#ExperienceSection").offset();
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     var scrollTop = $(this).scrollTop();
     // console.log(scrollTop); //Very useful for scroll dev
 
@@ -59,53 +59,55 @@ $(document).ready(function() {
       { duration: 1, loop: false }
     );
 
-    //animations for skills div pullup and moving stuff
-    //CHANGED: now moves based on scrollTop
-    if (
-      windowWidth > 600 &&
-      1000 - 1.3 * scrollTop > 0 &&
-      scrollTop < SkillsSection.top
-    ) {
-      $("#disappearing_div_one").height(1000 - 1.3 * scrollTop);
-    }
+    // //animations for skills div pullup and moving stuff
+    // //CHANGED: now moves based on scrollTop
+    // if (
+    //   windowWidth > 600 &&
+    //   1000 - 1.3 * scrollTop > 0 &&
+    //   scrollTop < SkillsSection.top
+    // ) {
+    //   $("#disappearing_div_one").height(1000 - 1.3 * scrollTop);
+    // }
 
-    //DinoText animation
-    if (!skillsAnimated) {
-      if (scrollTop > SkillsSection.top - 100) {
-        $("#DinoText").velocity(
-          { translateY: 0 },
-          { duration: 500, loop: false }
-        );
-        $("#DinoText2").velocity(
-          { translateY: 0 },
-          { duration: 750, loop: false }
-        );
-        skillsAnimated = true;
-      }
-    }
+    // //DinoText animation
+    // if (!skillsAnimated) {
+    //   if (scrollTop > SkillsSection.top - 100) {
+    //     $("#DinoText").velocity(
+    //       { translateY: 0 },
+    //       { duration: 500, loop: false }
+    //     );
+    //     $("#DinoText2").velocity(
+    //       { translateY: 0 },
+    //       { duration: 750, loop: false }
+    //     );
+    //     skillsAnimated = true;
+    //   }
+    // }
 
-    //reset DinoText
-    if (scrollTop < SkillsSection.top - 350) {
-      $("#DinoText").velocity(
-        { translateY: 1500 },
-        { duration: 1, loop: false }
-      );
-      $("#DinoText2").velocity(
-        { translateY: 1500 },
-        { duration: 1, loop: false }
-      );
-      skillsAnimated = false;
-    }
+    // //reset DinoText
+    // if (scrollTop < SkillsSection.top - 350) {
+    //   $("#DinoText").velocity(
+    //     { translateY: 1500 },
+    //     { duration: 1, loop: false }
+    //   );
+    //   $("#DinoText2").velocity(
+    //     { translateY: 1500 },
+    //     { duration: 1, loop: false }
+    //   );
+    //   skillsAnimated = false;
+    // }
 
     //experiences animations
+
+    console.log(scrollTop);
     if (scrollTop > ExperienceSection.top - 200 && !disappearedDIV2) {
       $(".hiding_div").velocity({ width: "100%" }, { duration: 500 });
-      setTimeout(function() {
+      setTimeout(function () {
         $(".experience").fadeTo("fast", 1);
         $(".small-text").fadeTo("fast", 1);
       }, 490);
       //make arrows change color
-      setTimeout(function() {
+      setTimeout(function () {
         $(".more_content")
           .velocity({ color: "#FFFF00" }, { duration: 500 })
           .velocity({ color: "#000000" }, { duration: 500 })
@@ -113,9 +115,9 @@ $(document).ready(function() {
       }, 600);
       disappearedDIV2 = true;
     }
-    if (scrollTop < 800 && disappearedDIV2) {
+    if (scrollTop < 50 && disappearedDIV2) {
       $(".hiding_div").velocity({ width: 0 }, { duration: 0 });
-      setTimeout(function() {
+      setTimeout(function () {
         $(".experience").fadeTo("fast", 0);
         $(".small-text").fadeTo("fast", 0);
       }, 0);
@@ -125,7 +127,7 @@ $(document).ready(function() {
       );
       //reset small experience tip
       $(".small-text").fadeTo("fast", 0);
-      setTimeout(function() {
+      setTimeout(function () {
         $(".small-text").text("*click experience to see more details*");
         $(".small-text").fadeTo("slow", 1);
       }, 500);
@@ -202,5 +204,18 @@ $(document).ready(function() {
         .velocity({ translateX: -2000 }, { duration: 400, loop: false });
       navOn = false;
     }
+  });
+
+  var typed = new Typed("#typed", {
+    strings: [
+      " I'm an engineer.",
+      " I'm a software developer.",
+      " I'm a problem solver.",
+      " I'm an innovator.",
+    ],
+    typeSpeed: 50,
+    backSpeed: 50,
+    smartBackspace: true, // this is a default
+    loop: true,
   });
 });

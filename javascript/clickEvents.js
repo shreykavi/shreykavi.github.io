@@ -1,6 +1,7 @@
 //function for details object
 var jobs = ["verkada", "clearpath", "miovision", "rbc", "d+h", "plan_group"];
 var projects = [
+  "avai",
   "sense",
   "thermonitor",
   "growbusy",
@@ -9,7 +10,7 @@ var projects = [
   "benny",
   "keil",
   "waitless",
-  "morsecode"
+  "morsecode",
 ];
 
 //TODO: finish setting up all data here + missing images for first 2
@@ -21,7 +22,7 @@ function getDetails(experience) {
     location: "",
     tech: "",
     small_description: "",
-    large_description: ""
+    large_description: "",
   };
 
   //Set using this
@@ -43,7 +44,7 @@ function getDetails(experience) {
         "Python, Flask, PostgreSQL, DynamoDB, Redis, CircleCI, Twilio, pytest, AWS";
       returnDetails.small_description = "Backend Engineering";
       returnDetails.large_description =
-        "Developed cross server services for features that interface client IoT devices.<br><br>Used historical camera captures to track paths of specific individuals on a floor plan.<br><br>Sharing feature grants external contacts with temporary access to secured content.<br><br>Test driven development with isolated unit tests and code reviews for daily releases.";
+        "Developed cross server services for features that interface client IoT camera devices.<br><br>Used historical camera captures to track paths of specific individuals on a floor plan.<br><br>Sharing feature grants external contacts with temporary access to secured content.<br><br>Test driven development with isolated unit tests and code reviews for daily releases.";
       break;
     case "clearpath":
       returnDetails.title = "Clearpath Robotics Inc.";
@@ -101,15 +102,26 @@ function getDetails(experience) {
         "Addressed design and formatting concerns from various clients. These were then added to existing drawings which were used for construction.<br><br>Worked on Single Line Diagram Schematics for multiple clients.<br><br>Utilized AutoCAD to complete drawings for records and manuals.";
       break;
 
-    case "sense":
-      returnDetails.title = "Sense";
-      returnDetails.image = "pics/sense.png";
-      returnDetails.date = "June 2019 - Present";
+    case "avai":
+      returnDetails.title = "Audio Video AI";
+      returnDetails.image = "pics/avai.png";
+      returnDetails.date = "January 2020 - Present";
       returnDetails.tech =
-        "React, NodeJS, ExpressJS, MongoDB, OAuth 2.0, RaspberryPi, Websockets, Redis";
-      returnDetails.small_description = "IoT Development Platform";
+        "React, NodeJS, ExpressJS, MongoDB, OAuth 2.0, RaspberryPi, ESP8266, I2C Sensors/ Actuators, Websockets, Redis";
+      returnDetails.small_description = "Automated Video Editing";
       returnDetails.large_description =
-        "Device pipelines realtime data from external hardware to a Node.js backend with dashboard for data visualization and public API for access to collected data.";
+        "Standalone desktop application which makes video editing more time efficient by automating their workflow. Software gets data from editing software and does automatic processing using OpenCV and machine learning.";
+      break;
+    case "sense":
+      returnDetails.title = "Sense IoT";
+      returnDetails.image = "pics/sense.png";
+      returnDetails.date = "June 2019 - March 2020";
+      returnDetails.tech =
+        "React, NodeJS, ExpressJS, MongoDB, OAuth 2.0, RaspberryPi, ESP8266, I2C Sensors/ Actuators, Websockets, Redis";
+      returnDetails.small_description = "Educational IoT Toy";
+      returnDetails.large_description =
+        "Toy helps teache kids the principles of IoT development using an interactive kid friendly webpage. The application includes a built-in compiler which communicates with external hardware toys to run code in realtime.";
+      // "Device pipelines realtime data from external hardware to a Node.js backend with dashboard for data visualization and public API for access to collected data.";
       break;
     case "growbusy":
       returnDetails.title = "growbusy";
@@ -190,7 +202,7 @@ function getDetails(experience) {
   return returnDetails;
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   //create scrollable cards of brief descriptions
   for (var i = 0; i < jobs.length; i++) {
     var temp = getDetails(jobs[i]);
@@ -228,7 +240,7 @@ $(document).ready(function() {
   }
 
   //scroll experience content with buttons
-  $(".more_content").click(function(e) {
+  $(".more_content").click(function (e) {
     console.log();
     var scrollAmount = 0;
     var divWidth = $("#work-experiences").width();
@@ -268,7 +280,7 @@ $(document).ready(function() {
     }
   });
   //buttons disappear with scroll
-  $("#work-experiences").scroll(function() {
+  $("#work-experiences").scroll(function () {
     var scrollAmount = $("#work-experiences").scrollLeft();
     var divWidth = $("#work-experiences").width();
     var maxScroll = $("#work-experiences")[0].scrollWidth;
@@ -286,7 +298,7 @@ $(document).ready(function() {
       $("#work-arrow-r").text(">");
     }
   });
-  $("#project-experiences").scroll(function() {
+  $("#project-experiences").scroll(function () {
     var scrollAmount = $("#project-experiences").scrollLeft();
     var divWidth = $("#project-experiences").width();
     var maxScroll = $("#project-experiences")[0].scrollWidth;
@@ -306,7 +318,7 @@ $(document).ready(function() {
   });
 
   //scrolling from navbar
-  $(".navlink").click(function(e) {
+  $(".navlink").click(function (e) {
     e.preventDefault();
     var sectionID = e.currentTarget.id + "Section";
     console.log(sectionID);
@@ -316,7 +328,7 @@ $(document).ready(function() {
     }
     $("html, body").animate(
       {
-        scrollTop: theOffset.top
+        scrollTop: theOffset.top,
       },
       450
     );
@@ -327,7 +339,7 @@ $(document).ready(function() {
   $(".experience-details").velocity({ translateX: 2000 }, { duration: 0 });
 
   //experience details pop up
-  $(".experience").click(function(e) {
+  $(".experience").click(function (e) {
     e.preventDefault();
 
     var experience = e.currentTarget.id;
@@ -379,13 +391,13 @@ $(document).ready(function() {
 
     //Small text animation
     $(".small-text").fadeTo("fast", 0);
-    setTimeout(function() {
+    setTimeout(function () {
       $(".small-text").text("*click outside box to close details*");
       $(".small-text").fadeTo("slow", 1);
     }, 500);
   });
 
-  $(document).click(function(e) {
+  $(document).click(function (e) {
     if (detailsOn == true) {
       if (e.target.class == ("experience-details" || "experience")) return;
       //For descendants of menu_content being clicked, remove this check if you do not want to put constraint on descendants.
@@ -395,15 +407,15 @@ $(document).ready(function() {
       //Do processing of click event here for every element except with id menu_content
       $(".experience-details").velocity(
         {
-          translateX: 2000
+          translateX: 2000,
         },
         {
-          duration: 300
+          duration: 300,
         }
       );
       //reset small experience tip
       $(".small-text").fadeTo("fast", 0);
-      setTimeout(function() {
+      setTimeout(function () {
         $(".small-text").text("*click experience to see more details*");
         $(".small-text").fadeTo("slow", 1);
       }, 500);
@@ -413,7 +425,7 @@ $(document).ready(function() {
 
   //Me descriptions
   $(".imglink")
-    .mouseenter(function() {
+    .mouseenter(function () {
       switch ($(this).attr("id")) {
         case "linkedin":
           $("#imglinkdesc").html("*click for linkedin*");
@@ -428,7 +440,7 @@ $(document).ready(function() {
           break;
       }
     })
-    .mouseleave(function() {
+    .mouseleave(function () {
       $("#imglinkdesc").html("*hover over for descriptions*");
     });
 });

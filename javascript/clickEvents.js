@@ -41,10 +41,10 @@ function getDetails(experience) {
       returnDetails.date = "September - December 9";
       returnDetails.location = "San Mateo, CA";
       returnDetails.tech =
-        "Python, Flask, PostgreSQL, DynamoDB, Redis, CircleCI, Twilio, pytest, AWS";
+        "Python, Flask, PostgreSQL, DynamoDB, Redis, CircleCI, Twilio, pytest, AWS, Embedded Linux, React";
       returnDetails.small_description = "Backend Engineering";
       returnDetails.large_description =
-        "Developed cross server services for features that interface client IoT camera devices.<br><br>Used historical camera captures to track paths of specific individuals on a floor plan.<br><br>Sharing feature grants external contacts with temporary access to secured content.<br><br>Test driven development with isolated unit tests and code reviews for daily releases.";
+        "Developed cross server services for features that interface client IoT camera devices.<br><br>Used historical camera data to track paths of individuals walking on a floor plan.<br><br>Sharing feature grants external contacts with temporary access to secured content without login.<br><br>Test driven development with isolated unit tests and code reviews for daily releases.";
       break;
     case "clearpath":
       returnDetails.title = "Clearpath Robotics Inc.";
@@ -55,7 +55,7 @@ function getDetails(experience) {
         "ROS, RVIZ, Gazebo, 2D/3D Lidars, RTK GPS, IMU, SNMP, EKF, SLAM";
       returnDetails.small_description = "Software Developer";
       returnDetails.large_description =
-        "Developed docking algorithm that autonomously navigates robot into dock for automated charging.<br><br>Setup RTK GPS for precise satellite positioning with SwiftNav Duro. This was later utilized by an engineering to develop a navigation software.<br><br>Improved Gazebo simulation development environments for more realistic behavior.";
+        "Developed docking algorithm that autonomously navigates robot into a charging dock at low battery levels.<br><br>Setup RTK GPS for precise satellite positioning with SwiftNav Duro. This was later utilized to develop automated navigation software.<br><br>Improved Gazebo simulation development environments for realistic physical behavior.";
       break;
     case "miovision":
       returnDetails.title = "Miovision Technologies";
@@ -66,7 +66,7 @@ function getDetails(experience) {
         "Code Composer Studio, Tiva microcontroller, C++, Python, Linux, SPI, MongoDB, Express.js, AngularJS, Node.js";
       returnDetails.small_description = "Hardware Firmware Developer ";
       returnDetails.large_description =
-        "Developed microcontroller firmware to control testing hardware used for water rating new devices.<br><br>Created full-stack MEAN applications over multiple servers to gather and organize hardware test data from multiple Databases. This data was used to track device manufacturing data.<br><br>Enhanced existing device firmware by adding features and optimizing performance.";
+        "Developed microcontroller firmware to control testing hardware used for water rating new camera devices.<br><br>Created full-stack MEAN applications over multiple servers to gather and organize hardware test data from multiple Databases. This data was used to track device manufacturing and to prevent shipping faulty products.<br><br>Enhanced existing device firmware by adding features and optimizing performance.";
       break;
     case "rbc":
       returnDetails.title = "RBC Global Asset Management";
@@ -77,7 +77,7 @@ function getDetails(experience) {
         "React, JQuery, Laravel, Node.js, SQL, Git, Bash, JavaScript, ES6, HTML5, CSS3";
       returnDetails.small_description = "Web Developer";
       returnDetails.large_description =
-        "Developed full-stack applications used by thousands of advisors all over Canada.<br><br>Reconstructed third-party web tools using React framework.<br><br>Helped build and add numerous features to existing tools.<br><br>Patched critical bugs under time constraints.";
+        "Developed full-stack applications used by thousands of advisors all over Canada to increase customer acquisition.<br><br>Reconstructed third-party web tools using React framework.<br><br>Helped build and add numerous features to existing tools.<br><br>Patched critical bugs under time constraints.";
       break;
     case "d+h":
       returnDetails.title = "Finastra";
@@ -107,10 +107,10 @@ function getDetails(experience) {
       returnDetails.image = "pics/avai.png";
       returnDetails.date = "January 2020 - Present";
       returnDetails.tech =
-        "React, NodeJS, ExpressJS, MongoDB, OAuth 2.0, RaspberryPi, ESP8266, I2C Sensors/ Actuators, Websockets, Redis";
+        "React, Electron, NodeJS, Firebase, Websockets, ZeroMQ, OpenCV";
       returnDetails.small_description = "Automated Video Editing";
       returnDetails.large_description =
-        "Standalone desktop application which makes video editing more time efficient by automating their workflow. Software gets data from editing software and does automatic processing using OpenCV and machine learning.";
+        "Standalone desktop application which makes video editing more time efficient by automating the post-production workflow. Gets data from video editing software and does automatic processing using OpenCV and machine learning.";
       break;
     case "sense":
       returnDetails.title = "Sense IoT";
@@ -120,7 +120,7 @@ function getDetails(experience) {
         "React, NodeJS, ExpressJS, MongoDB, OAuth 2.0, RaspberryPi, ESP8266, I2C Sensors/ Actuators, Websockets, Redis";
       returnDetails.small_description = "Educational IoT Toy";
       returnDetails.large_description =
-        "Toy helps teache kids the principles of IoT development using an interactive kid friendly webpage. The application includes a built-in compiler which communicates with external hardware toys to run code in realtime.";
+        "Toy teaches kids the principles of IoT development using an interactive kid friendly webpage. Delivers early satisfaction of engineering process with a game-like environment. The application includes a built-in compiler which communicates with external hardware toys to run code in realtime.";
       // "Device pipelines realtime data from external hardware to a Node.js backend with dashboard for data visualization and public API for access to collected data.";
       break;
     case "growbusy":

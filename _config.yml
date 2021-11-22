@@ -1,13 +1,13 @@
-title: "Affiliates"
-email: wowthemesnet@gmail.com
+title: "Shrey's Blog"
+email: shreykavi@gmail.com
 timezone: UTC
 baseurl: ""
 permalink: "/:title/"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
-author: Sal
+author: Shrey 
 paginate: 30
-disqus: 'demowebsite'
+disqus: 'shreykavi'
 locale: en_us
 lang: en_us
 feed_items: 10
@@ -20,34 +20,29 @@ kramdown:
 sass:
   sass_dir: _sass
   style: :compressed
-ganalytics: UA-113961478-1
+# ganalytics: UA-113961478-1
 domain: shreykavi.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://shreykavi.github.io  # the base hostname and protocol for your site, e.g. http://example.com
+layout: default
+comments: true
+formspree: xwkaggaa
 
 # Authors
 authors:
-  sal:
-    name: Sal
-    display_name: Sal
+  shrey:
+    name: Shrey 
+    display_name: Shrey
     avatar: 'assets/images/sal.png'
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net/category/jekyll-themes/
-    twitter: https://twitter.com/wowthemesnet
+    email: shreykavi@gmail.com
+    # web: https://www.wowthemes.net/category/jekyll-themes/
+    # twitter: https://twitter.com/shreykavi
     description: "Author of Affiliates, a template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
-  john:
-    name: John
-    display_name: John
-    avatar: 'assets/images/john.png'
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net/category/jekyll-themes/
-    twitter: https://twitter.com/wowthemesnet
-    description: "This is the author box. Write a short description of the author here. You are currently previewing Affiliates theme demo, a Jekyll template compatible with Github pages."
 
 # Social
 social:
-  instagram: https://www.instagram.com/bootstrapstarter/
-  facebook: https://www.facebook.com/bootstrapstartercom-346329609045284
-  twitter: https://twitter.com/bstartercom
+  # instagram: https://www.instagram.com/bootstrapstarter/
+  # facebook: https://www.facebook.com/bootstrapstartercom-346329609045284
+  # twitter: https://twitter.com/bstartercom
 
 # Plugins
 plugins: 

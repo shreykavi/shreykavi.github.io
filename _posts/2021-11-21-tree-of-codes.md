@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "My experiences so far"
-author: shrey 
+# author: shrey 
 categories: [ Personal ]
 image: assets/images/6.jpg
 ---

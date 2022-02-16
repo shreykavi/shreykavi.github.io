@@ -1,4 +1,4 @@
-# Personal Webite / Blog
+# Personal Website / Blog
 Runs a Jekyll blog with my content.
 
 # Local Development:

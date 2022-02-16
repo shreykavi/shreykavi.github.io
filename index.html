@@ -6,17 +6,38 @@ background: '/img/bg-index.jpg'
 
 <!-- Home Intro
 ================================================== -->
-{% if page.url == "/" %} 
+{% if page.url == "/" %}
+<script src="https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js"></script>
+<script type="module">
+  var typed = new Typed("#typed", {
+    strings: [
+      "I",
+      "I'm an engineer.",
+      "I'm an innovator.",
+      "I'm a problem solver.",
+      "I'm a developer.",
+      "I write code.",
+    ],
+    typeSpeed: 50,
+    backSpeed: 75,
+    backDelay: 2000,
+    smartBackspace: true, // this is a default
+    loop: true,
+    autoInsertCss: true,
+  });
+</script>
+
 <div class="rounded mb-5 hero">
   <div class="row align-items-center justify-content-between">
     <div class="col-md-6">
-      <h1 class="font-weight-bold mb-3 serif-font">I write code.</h1>
-      <p class="lead mb-4">I'm Shrey and if my domain didn't give it away I build software.</p>
+      <!-- <h1 class="font-weight-bold mb-3 serif-font">I write code.</h1> -->
+      <h1 class="font-weight-bold mb-3 serif-font" id="typed" style="display: inline;">I</h1>
+      <p class="lead mb-4">I'm Shrey and if my domain didn't give it away I code.</p>
       <!-- <p class="lead mb-4">My name is Shrey and I'm here to share with you my knowledge and experience of over 10 years of monetizing my blog.</p> -->
       <a href="{{site.baseurl}}/about" class="btn btn-dark text-white px-5 btn-lg">About me</a>
     </div>
     <div class="col-md-6 text-right pl-0 pl-lg-4">
-      <img class="intro" height="500" src="{{site.baseurl}}/assets/images/intro.svg">      
+      <img class="intro" height="500" src="{{site.baseurl}}/assets/images/intro.svg">
     </div>
   </div>
 </div>
@@ -26,11 +47,11 @@ background: '/img/bg-index.jpg'
 ================================================== -->
 <section class="row">
   {% for post in site.posts %}
-      {% if post.featured == true %}
-          <div class="col-md-4 mb-5">
-          {% include postbox.html %}
-          </div>
-      {% endif %}
+  {% if post.featured == true %}
+  <div class="col-md-4 mb-5">
+    {% include postbox.html %}
+  </div>
+  {% endif %}
   {% endfor %}
   </div>
 </section>
@@ -51,7 +72,7 @@ background: '/img/bg-index.jpg'
     <!-- Pagination -->
     <div class="bottompagination">
       <span class="navigation" role="navigation">
-          {% include pagination.html %}
+        {% include pagination.html %}
       </span>
     </div>
   </div>

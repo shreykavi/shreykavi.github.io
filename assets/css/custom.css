@@ -4,3 +4,7 @@ Just customize your theme here.
 ================================================== */
 
 body {}
+
+.typed-cursor {
+    font-size: 2.5em;
+}

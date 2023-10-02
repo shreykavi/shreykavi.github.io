@@ -5,15 +5,15 @@ permalink: "/about/"
 # image: assets/images/screenshot.png
 ---
 
-My name's Shrey and I write code.
+My name's Shrey. I'm the cofounder of [Cleancut.ai]({{https://cleancut.ai/}}), an AI Copilot trained to help video editors.
 
-Heres my story. I went to the University of Waterloo and throughout those 5 years I got the opportunity to intern at 6 different companies (known as the co-op program for all you Canadians). My plan going into those internships was to find out what I wanted to do with software.
+You want to know my story?
 
-Pause. WHAT? I didn't just come out the womb gifted with profound intellectual abilities, and start writing software at the age of 3??
+I went to the University of Waterloo and throughout those 5 years I got the opportunity to intern at 6 different companies. My plan going into those internships was to find out what I wanted to do with software.
 
-Nope. Like every other student I was lost. I mean I liked writing code, but you can build all types of different software, and work in a range of industries. So, I did what I feel like most students fail to do, I worked a variety of software jobs; writing test suites for quality assurance, building frontend apps for banks, writing programs for robots and firmware for microcontrollers. Finally, I landed on writing backend services for startups which I've been doing full-time since I graduated.
+Like most other students I was lost. I mean I liked writing code, but you can build all types of different software, and work in a range of industries. So, I did what I feel like most students fail to do, I worked a variety of jobs; writing test suites for quality assurance, building frontend apps for banks, writing programs for robots and firmware for microcontrollers. I also worked at companies of varying sizes, from massive corporations to 30 person startups.
 
-<!-- So what's this website for you ask? This is a place to learn all about me! It contains information about what I'm working on next, all the questions I answer, the things I learn and its helping me get an extra writing credit for english (I'm joking). -->
+I went on to work at Asana as a software engineer. Right about this time a project I had been helping my friend with had been growing traction and I realized I wanted to continue working on it. This project was [Cleancut.ai]({{https://cleancut.ai/}}).
 
 As of now this websites pretty empty, but follow my [Medium Page]({{site.social.medium}}) if you're interested in keeping up with my journey!
 
